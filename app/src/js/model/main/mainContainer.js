@@ -8,9 +8,14 @@ class MainContainer extends Base {
             self: 'cnbc-admin-main-self',
             top: 'cnbc-admin-main-top',
             ad :{
-                top : 'cnbc-admin-main-ad-top',
-                middle : 'cnbc-admin-main-ad-middel',
-                bottom : 'cnbc-admin-main-ad-bottom'
+                left : {
+                    middle : 'cnbc-admin-main-ad-left-middle',
+                    bottom : 'cnbc-admin-main-ad-left-bottom'
+                },
+                right : {
+                    middle : 'cnbc-admin-main-ad-right-middle',
+                    bottom : 'cnbc-admin-main-ad-right-bottom'
+                }
             },
             popular : 'cnbc-admin-main-popular',
             ceo : 'cnbc-admin-main-ceo',
@@ -45,7 +50,9 @@ class MainContainer extends Base {
                                 <div id="${this.id.popular}"></div>
                                 <div id="${this.id.ceo}"></div>    
                             </div>
-                            <div class="top_news_bn"><a href="http://www.iboos.co.kr" style="display:block;margin-top:40px;"><img src="http://img.sbs.co.kr/sbscnbc/img/sbscnbc_main_banner.jpg" width="670" height="103" alt="SBSCNBC 부스 부동산스토리"></a></div>
+                            <div class="top_news_bn">
+                                <div id="${this.id.ad.left.middle}"></div>
+                            </div>
                             <div class="cl_bottom_cont">
                                 <div id="${this.id.program}"></div>
                             </div>
@@ -53,9 +60,11 @@ class MainContainer extends Base {
                                 <div id="${this.id.premium}"></div>
                             </div>
                            <ul class="cl_bottom_ad">
-                                <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
-                                <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
-                                <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
+                                <div id="${this.id.ad.left.bottom}">
+                                    <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
+                                    <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
+                                    <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
+                                </div>
                             </ul>
                         </div>
                         <div class="cont_right"></div>
@@ -96,6 +105,10 @@ class MainContainer extends Base {
             this.model.premium = new MainPremium(this.id.premium);
             this.model.premium.initialize();
             this.model.premium.render();
+
+            this.model.ad = new MainAD(this.id.ad);
+            this.model.ad.initialize();
+            this.model.ad.render();
 
             super.render();
         };
