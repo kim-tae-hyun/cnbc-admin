@@ -1,0 +1,711 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="Keywords" content="SBS CNBC, 뉴스, 증권, 경제, 글로벌경제, 산업, 금융, 산업, 부동산, 시사, 세계, 생활, 문화, 연예, 스포츠, 속보, 재테크, CEO, 교양, Biz, 라이브TV ">
+    <meta name="Description" content="SBS CNBC, 투자전략, 전문가 시장분석, 업종 종목 리포트, CEO취재파일, 핫이슈, 금융설계, 재무상담, 관심정보, SBS CNBC 코너, TV 프로그램 정보 제공">
+    <title>SBSCNBC : 의견 있는 경제채널</title>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://img.sbs.co.kr/sw16/cnbc/pc/js/main.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://img.sbs.co.kr/sw16/cnbc/pc/css/cnbc_common.css" />
+    <link type="text/css" rel="stylesheet" href="http://img.sbs.co.kr/sw16/cnbc/pc/css/cnbc_main.css" />
+</head>
+<body>
+<!--skip nav-->
+<ul id="skip_nav">
+    <li><a class="skip_nav_link" href="#snb">메인메뉴 바로가기</a></li>
+    <li><a class="skip_nav_link" href="#container">본문 바로가기</a></li>
+    <li><a class="skip_nav_link" href="#footer">하단메뉴 바로가기</a></li>
+</ul>
+<!--// skip nav-->
+<div id="wrap">
+    <!-- header-->
+    <div id="header" class=""><!-- scroll_on -->
+        <div class="header_inner">
+            <h1 class="sbscnbc_logo"><a href="#" class="scl_link icn"><i class="ir">SBSCNBC 의견 있는 경제채널</i></a></h1>
+            <h2 class="hide">SBSCNBC 메인메뉴</h2>
+            <ul id="snb">
+                <li class="snb_cont on">
+                    <a href="#" class="snb_link_news"><span class="icn"><i class="ir">뉴스</i></span></a><!--해당 페이지일 경우 on 추가-->
+                    <div class="snbc_list_w"><!--활성화시 current 추가 -->
+                        <ul class="snbcl_news">
+                            <li class="snbc_cont select"><a href="#" class="snbc_link">증권</a></li><!--활성화시 select 추가-->
+                            <li class="snbc_cont"><a href="#" class="snbc_link">경제</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">글로벌</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">산업</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">부동산</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">금융</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">시사</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">속보</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="snb_cont">
+                    <a href="#" class="snb_link_biz"><span class="icn"><i class="ir">재테크</i></span></a>
+                    <div class="snbc_list_w">
+                        <ul class="snbcl_biz">
+                            <li class="snbc_cont"><a href="#" class="snbc_link">증권정보</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">재무</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">부동산정보</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="snb_cont">
+                    <a href="#" class="snb_link_ceo"><span class="icn"><i class="ir">CEO</i></span></a>
+                    <div class="snbc_list_w">
+                        <ul class="snbcl_ceo">
+                            <li class="snbc_cont"><a href="#" class="snbc_link">CEO취재파일</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">CEO&amp;Leaders</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">블루베리</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="snb_cont">
+                    <a href="#" class="snb_link_program"><span class="icn"><i class="ir">프로그램</i></span></a>
+                    <div class="snbc_list_w">
+                        <ul class="snbcl_program">
+                            <li class="snbc_cont"><a href="#" class="snbc_link">전체</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">뉴스</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">재테크</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">CEO</a></li>
+                            <li class="snbc_cont"><a href="#" class="snbc_link">교양</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="hi_right">
+                <h2 class="hide">SBSCNBC 공통메뉴</h2>
+                <ul class="gnb">
+                    <li class="gnb_cont"><a href="#" class="gnb_link">로그인</a></li>
+                    <li class="gnb_cont_onair"><i class="round_blue_left icn"></i><a href="#" class="gnb_link">ON AIR</a><i class="round_blue_right icn"></i></li>
+                    <li class="gnb_cont"><a href="#" class="gnb_link">채널번호</a></li>
+                    <li class="gnb_cont"><a href="#" class="gnb_link">편성표</a></li>
+                    <li class="gnb_cont"><a href="#" class="gnb_link">시청자게시판</a></li>
+                    <li class="gnb_cont"><a href="#" class="gnb_link">SBS뉴스</a></li>
+                </ul>
+                <h2 class="hide">검색엔진</h2>
+                <form>
+                    <fieldset>
+                        <legend>통합검색</legend>
+                        <div class="search_form">
+                            <label for="search" class="search_label">검색어 입력</label>
+                            <input type="text" id="search" value="주식투자 어렵다면? 컨닝하세요!" class="search_txt show"><!--사용자가 텍스트 입력 시 value값 초기화 및 클래스 on 추가 , scroll시 없어졌던 input박스 show 추가시  나타나기 -->
+                            <button type="button" class="search_btn"><span class="icn"><i class="ir">검색</i></span></button><!-- scroll시 input박스 없어지고 클릭하면 input박스 나타남 이후 검색기능 -->
+                        </div><!--//cnbc_search-->
+                    </fieldset>
+                </form>
+            </div><!--//hi_right-->
+        </div><!--//header_inner-->
+    </div>
+    <!--//header-->
+    <div id="container">
+        <div class="cnbc_main_quick"><!-- 패밀리사이트 -->
+            <h2 class="cmq_tit">SBS FAMILY</h2>
+            <ul class="cmq_list">
+                <li><a href="http://www.sbs.co.kr/" target="_top">SBS</a></li>
+                <li><a href="http://sbsplus.sbs.co.kr" target="_top">PLUS</a></li>
+                <li><a href="http://sbssports.sbs.co.kr/" target="_top">SPORTS</a></li>
+                <li><a href="http://golf.sbs.co.kr/" target="_top">GOLF</a></li>
+                <li><a href="http://sbscnbc.sbs.co.kr/" target="_top">CNBC</a></li>
+                <li><a href="http://sbsfune.sbs.co.kr/" target="_top">funE</a></li>
+                <li><a href="http://www.mtv.co.kr/" target="_top">MTV</a></li>
+                <li><a href="http://www.nick.co.kr/" target="_top">nick</a></li>
+            </ul>
+        </div><!--// 패밀리사이트 -->
+        <div class="content_top">
+            <div class="contop_left">
+                <h2 class="hide">헤드라인 톱기사</h2>
+                <div class="ctl_top_article">
+                    <ul class="cta_list"><!--활성화시 current 추가-->
+                        <li class="ctal_cont current"><a href="#" class="ctalc_link"><strong class="ctalc_title">이재용 부회장 방문<br>안하면 직원들은<br>불안하다?</strong><span class="ctalc_text">지난 9일 이재용 삼성전자 부회장이 삼성중공업 거제조선소를 전격 방문했습니다. 이어 사흘뒤...</span></a></li>
+                        <li class="ctal_cont"><a href="#" class="ctalc_link"><strong class="ctalc_title">이재용 부회장 방문<br>안하면 직원들은<br>불안하다?</strong><span class="ctalc_text">지난 9일 이재용 삼성전자 부회장이 삼성중공업 거제조선소를 전격 방문했습니다. 이어 사흘뒤...</span></a></li>
+                        <li class="ctal_cont"><a href="#" class="ctalc_link"><strong class="ctalc_title">이재용 부회장 방문<br>안하면 직원들은<br>불안하다?</strong><span class="ctalc_text">지난 9일 이재용 삼성전자 부회장이 삼성중공업 거제조선소를 전격 방문했습니다. 이어 사흘뒤...</span></a></li>
+                    </ul>
+                    <ul class="cta_bg_slide">
+                        <li class="ctabgs_cont"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_headlinebg_01.jpg" alt="두번째 기사 이미지" class="ctabgs_img" width="709" height="310"></li>
+                        <li class="ctabgs_cont"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_headlinebg_01.jpg" alt="첫번째 기사 이미지" class="ctabgs_img" width="709" height="310"></li>
+                    </ul>
+                    <div class="cta_btn_w">
+                        <ul class="ctabtn_indicator_w"><!--활성화시 on 추가-->
+                            <li class="ctabi_cont on"><a href="#" class="ctabi_link icn" title="첫번째 기사 보기"><i class="ir">첫번째 기사</i></a></li>
+                            <li class="ctabi_cont"><a href="#" class="ctabi_link icn" title="두번째 기사 보기"><i class="ir">두번쨰 기사</i></a></li>
+                            <li class="ctabi_cont"><a href="#" class="ctabi_link icn" title="세번째 기사 보기"><i class="ir">세번째 기사</i></a></li>
+                        </ul>
+                        <a href="#" class="ctabtn_auto_stop" title="자동재생 멈추기"><span class="icn"><i class="ir">자동재생 멈춤</i></span></a>
+                        <!--멈춤버튼 클릭 시 자동재생 태그로 변경해주세요-->
+                        <a href="#" class="ctabtn_auto_play" title="자동재생"><span class="icn"><i class="ir">자동재생</i></span></a>
+                        <div class="ctabtn_arrow">
+                            <a href="#" class="ctaba_l" title="이전 기사 보기"><span class="icn"><i class="ir">이전 기사 보기</i></span></a>
+                            <a href="#" class="ctaba_r" title="다음 기사 보기"><span class="icn"><i class="ir">다음 기사 보기</i></span></a>
+                        </div>
+                    </div>
+                    <i class="cta_mask"></i>
+                </div>
+            </div><!--contop_left-->
+            <div class="contop_right">
+                <h2 class="hide">현재 방송중인 프로그램</h2>
+                <div class="ctr_program_onair">
+                    <a href="#" class="cpo_w">
+              <span class="cpo_text_w"><!--160503 수정-->
+                <strong class="cpo_headtitle"><span class="icn"><i class="ir">SBSCNBC ON AIR</i></span><i class="ht_topbar"></i></strong>
+				<span class="cpo_onair_wrap">
+					<span class="cpo_onair"><i class="round_yellow_left icn"></i><span class="cpo_onair_text">ON&#45;AIR</span><i class="round_yellow_right icn"></i></span>
+					<em class="cpo_prog_title">경제와이드 백브리핑 시시각각</em>
+					<span class="cpo_prog_day">월-금 10:00~12:00</span>
+				</span>
+              </span><!--160503 수정-->
+                        <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/main/main_onair.jpg" alt="경제와이드 백브리핑 시시각각" class="cpo_prog_img" width="280" height="310"><!--alt값에 프로그램명 넣어주세요-->
+                    </a>
+                </div>
+                <!--2017-03-23 레이어팝업 추가 -->
+                <div class="contop_bn" style="display:block;">
+                    <button type="button" class="contop_bn_close"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/popup_close_btn.png" width="15" height="15" alt="닫기버튼"></button>
+                    <a href="#" class="popup_work" target="blank">
+                        <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/popup_new.jpg" width="280" height="310" alt="봄 개편 프로그램 안내 발 빠르게 전하는 뉴스, 한층 더 깊이 있는 방송, 새로워진 SBSCNBC를 만나보세요!">
+                    </a>
+                </div>
+            </div><!--contop_right-->
+        </div><!--content_top-->
+        <div id="content" class="main_content_w">
+            <div class="cont_left">
+                <div class="top_news_bn"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/top_news_bn.jpg" width="670" height="103" alt=""></div>
+                <div class="cl_top_cont">
+                    <div class="cltc_main_news">
+                        <h2 class="hide">주요뉴스</h2>
+                        <ul class="clmn_list">
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                        </ul>
+                        <ul class="clmn_list">
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                        </ul>
+                        <ul class="clmn_list">
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                            <li class="clmn_cont"><a href="#" class="clmn_link">엘리베이터에서 발견된 '의문의 복권' 2천 장 엘리베이터에서 발견된 '의문의 복권' 2천 장</a></li>
+                        </ul>
+                    </div><!--cltc_main_news-->
+                    <div class="cltc_ceo_news">
+                        <h2 class="clceo_tagname"><a href="#" class="clceo_tagname_link">CEO취재파일</a></h2>
+                        <div class="clceo_top_w">
+                            <a href="#" class="clct_cont">
+                                <strong class="clct_title">구지은 부사장과 아워홈 자회사의 실적 악화</strong>
+                                <span class="clct_text">구지은 아워홈 부사장이 지난 18일 경영에 복귀했습니다. 구 부사장은 지난해 7월구매식재사업본부장에서 보직 해임됐었는데요...</span>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_ceonews.jpg" alt="구지은 부사장과 아워홈 자회사의 실적 악화" class="clct_img" width="286" height="162"><!--alt값에 기사 타이틀과 동일하게 적어주세요-->
+                                <span class="clct_reporter"><i class="vertical_bar_blue"></i>윤진섭 기자</span>
+                            </a>
+                            <h3 class="hide">CEO취재파일 관련기사</h3>
+                            <ul class="clceo_relate">
+                                <li class="clc_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clc_relate_link">박성경 이랜드그룹 부회장, 모자 패션에 박성경 이랜드그룹 부회장, 모자 패션에......</a></li>
+                                <li class="clc_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clc_relate_link">박성경 이랜드그룹 부회장, 모자 패션에 박성경 이랜드그룹 부회장, 모자 패션에......</a></li>
+                                <li class="clc_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clc_relate_link">박성경 이랜드그룹 부회장, 모자 패션에 박성경 이랜드그룹 부회장, 모자 패션에......</a></li>
+                            </ul>
+                            <a href="#" class="crfn_more_ceo">더보기 <i class="icn"></i></a><!-- 160510 수정 클릭시 ceo취재파일로 이동. -->
+                        </div>
+                    </div><!--cltc_ceo_news-->
+                </div><!--cl_top_cont-->
+                <div class="cl_bottom_cont">
+                    <h2 class="clbc_issue_headtitle"><span class="icn"><i class="ir">주요 프로그램</i></span><i class="ht_topbar"></i></h2>
+                    <!-- 판이 바뀌는 롤링으로 항상 3의 배수가 나타날 수 있게 해주세요. 5개의 코너가 있으면 123 / 451 / 로 노출되어야합니다. -->
+                    <ul class="clbi_list current"><!--활성화 current -->
+                        <li class="clbi_cont_w">
+                            <h3 class="hide">첫번째 프로그램</h3>
+                            <i class="horizon_line"></i>
+                            <span class="clbi_num">1</span>
+                            <em class="clbi_title"><a href="#" class="clbi_title_link">&#35;식객남녀</a></em>
+                            <h4 class="hide">첫번째 프로그램 관련 기사</h4>
+                            <a href="#" class="clbi_cont">
+                                <i class="round_mask cpro_bg"></i><!-- 160510 수정 -->
+                                <strong class="clbi_text"><span class="clbit_align">여대생 입맛 사로잡은 35년 전통 분식집</span><i class="clbita_center"></i></strong>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_133x133_01.jpg" alt="여대생 입맛 사로잡은 25년 전통 분식집" class="clbi_img" width="133" height="133">
+                                <i class="round_mask icn"></i>
+                            </a>
+                            <ul class="clbi_relate">
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 여대생 입맛 여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                            </ul>
+                        </li>
+                        <li class="clbi_cont_w">
+                            <h3 class="hide">두번째 프로그램</h3>
+                            <i class="horizon_line"></i>
+                            <span class="clbi_num">2</span>
+                            <em class="clbi_title"><a href="#" class="clbi_title_link">&#35;인문학강의</a></em>
+                            <h4 class="hide">두번째 프로그램 관련 기사</h4>
+                            <a href="#" class="clbi_cont">
+                                <i class="round_mask cpro_bg"></i><!-- 160510 수정 -->
+                                <strong class="clbi_text"><span class="clbit_align">깨달음의 역사...한국인에게 불교란?</span><i class="clbita_center"></i></strong>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_133x133_02.jpg" alt="여대생 입맛 사로잡은 25년 전통 분식집" class="clbi_img" width="133" height="133">
+                                <i class="round_mask icn"></i>
+                            </a>
+                            <ul class="clbi_relate">
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 여대생 입맛 여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                            </ul>
+                        </li>
+                        <li class="clbi_cont_w">
+                            <h3 class="hide">세번째 프로그램</h3>
+                            <i class="horizon_line"></i>
+                            <span class="clbi_num">3</span>
+                            <em class="clbi_title"><a href="#" class="clbi_title_link">&#35;부동산</a></em>
+                            <h4 class="hide">세번째 프로그램 관련 기사</h4>
+                            <a href="#" class="clbi_cont">
+                                <i class="round_mask cpro_bg"></i><!-- 160510 수정 -->
+                                <strong class="clbi_text"><span class="clbit_align">서울 은평구 응암동 분양상가</span><i class="clbita_center"></i></strong>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_133x133_03.jpg" alt="여대생 입맛 사로잡은 25년 전통 분식집" class="clbi_img" width="133" height="133">
+                                <i class="round_mask icn"></i>
+                            </a>
+                            <ul class="clbi_relate">
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 여대생 입맛 여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                            </ul>
+                        </li>
+                    </ul><!--clbi_list-->
+                    <ul class="clbi_list">
+                        <li class="clbi_cont_w">
+                            <h3 class="hide">네번째 프로그램</h3>
+                            <i class="horizon_line"></i>
+                            <span class="clbi_num">4</span>
+                            <em class="clbi_title"><a href="#" class="clbi_title_link">&#35;식객남녀</a></em>
+                            <h4 class="hide">네번째 프로그램 관련 기사</h4>
+                            <a href="#" class="clbi_cont">
+                                <i class="round_mask cpro_bg"></i><!-- 160512 수정 -->
+                                <strong class="clbi_text"><span class="clbit_align">여대생 입맛 사로잡은 35년 전통 분식집</span><i class="clbita_center"></i></strong>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_133x133_01.jpg" alt="여대생 입맛 사로잡은 25년 전통 분식집" class="clbi_img" width="133" height="133">
+                                <i class="round_mask icn"></i>
+                            </a>
+                            <ul class="clbi_relate">
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 여대생 입맛 여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                            </ul>
+                        </li>
+                        <li class="clbi_cont_w">
+                            <h3 class="hide">다섯번째 프로그램</h3>
+                            <i class="horizon_line"></i>
+                            <span class="clbi_num">5</span>
+                            <em class="clbi_title"><a href="#" class="clbi_title_link">&#35;인문학강의</a></em>
+                            <h4 class="hide">다섯번째 프로그램 관련 기사</h4>
+                            <a href="#" class="clbi_cont">
+                                <i class="round_mask cpro_bg"></i><!-- 160512 수정 -->
+                                <strong class="clbi_text"><span class="clbit_align">깨달음의 역사...한국인에게 불교란?</span><i class="clbita_center"></i></strong>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_133x133_02.jpg" alt="여대생 입맛 사로잡은 25년 전통 분식집" class="clbi_img" width="133" height="133">
+                                <i class="round_mask icn"></i>
+                            </a>
+                            <ul class="clbi_relate">
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 여대생 입맛 여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                            </ul>
+                        </li>
+                        <li class="clbi_cont_w">
+                            <h3 class="hide">여섯번째 프로그램</h3>
+                            <i class="horizon_line"></i>
+                            <span class="clbi_num">6</span>
+                            <em class="clbi_title"><a href="#" class="clbi_title_link">&#35;부동산</a></em>
+                            <h4 class="hide">여섯번째 프로그램 관련 기사</h4>
+                            <a href="#" class="clbi_cont">
+                                <i class="round_mask cpro_bg"></i><!-- 160512 수정 -->
+                                <strong class="clbi_text"><span class="clbit_align">서울 은평구 응암동 분양상가</span><i class="clbita_center"></i></strong>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_133x133_03.jpg" alt="여대생 입맛 사로잡은 25년 전통 분식집" class="clbi_img" width="133" height="133">
+                                <i class="round_mask icn"></i>
+                            </a>
+                            <ul class="clbi_relate">
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 여대생 입맛 여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                            </ul>
+                        </li>
+                    </ul><!--clbi_list-->
+                    <ul class="clbi_list">
+                        <li class="clbi_cont_w">
+                            <h3 class="hide">일곱번째 프로그램</h3>
+                            <i class="horizon_line"></i>
+                            <span class="clbi_num">7</span>
+                            <em class="clbi_title"><a href="#" class="clbi_title_link">&#35;식객남녀</a></em>
+                            <h4 class="hide">일곱번째 프로그램 관련 기사</h4>
+                            <a href="#" class="clbi_cont">
+                                <i class="round_mask cpro_bg"></i><!-- 160512 수정 -->
+                                <strong class="clbi_text"><span class="clbit_align">여대생 입맛 사로잡은 35년 전통 분식집</span><i class="clbita_center"></i></strong>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_133x133_01.jpg" alt="여대생 입맛 사로잡은 25년 전통 분식집" class="clbi_img" width="133" height="133">
+                                <i class="round_mask icn"></i>
+                            </a>
+                            <ul class="clbi_relate">
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 여대생 입맛 여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                            </ul>
+                        </li>
+                        <li class="clbi_cont_w">
+                            <h3 class="hide">여덟번째 프로그램</h3>
+                            <i class="horizon_line"></i>
+                            <span class="clbi_num">8</span>
+                            <em class="clbi_title"><a href="#" class="clbi_title_link">&#35;인문학강의</a></em>
+                            <h4 class="hide">여덟번째 프로그램 관련 기사</h4>
+                            <a href="#" class="clbi_cont">
+                                <i class="round_mask cpro_bg"></i><!-- 160512 수정 -->
+                                <strong class="clbi_text"><span class="clbit_align">깨달음의 역사...한국인에게 불교란?</span><i class="clbita_center"></i></strong>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_133x133_02.jpg" alt="여대생 입맛 사로잡은 25년 전통 분식집" class="clbi_img" width="133" height="133">
+                                <i class="round_mask icn"></i>
+                            </a>
+                            <ul class="clbi_relate">
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 여대생 입맛 여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                            </ul>
+                        </li>
+                        <li class="clbi_cont_w">
+                            <h3 class="hide">아홉번째 프로그램</h3>
+                            <i class="horizon_line"></i>
+                            <span class="clbi_num">9</span>
+                            <em class="clbi_title"><a href="#" class="clbi_title_link">&#35;부동산</a></em>
+                            <h4 class="hide">아홉번째 프로그램 관련 기사</h4>
+                            <a href="#" class="clbi_cont">
+                                <i class="round_mask cpro_bg"></i><!-- 160512 수정 -->
+                                <strong class="clbi_text"><span class="clbit_align">서울 은평구 응암동 분양상가</span><i class="clbita_center"></i></strong>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_133x133_03.jpg" alt="여대생 입맛 사로잡은 25년 전통 분식집" class="clbi_img" width="133" height="133">
+                                <i class="round_mask icn"></i>
+                            </a>
+                            <ul class="clbi_relate">
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 여대생 입맛 여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                                <li class="clbi_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clbi_relate_link">여대생 입맛 사로잡은 35년 ...</a></li>
+                            </ul>
+                        </li>
+                    </ul><!--clbi_list-->
+                    <div class="clbi_indicator_w"><!--활성화 on -->
+                        <a href="#" class="clbi_indicator_btn on"><span class="icn"><i class="ir">첫번째 컨텐츠</i></span></a>
+                        <a href="#" class="clbi_indicator_btn"><span class="icn"><i class="ir">두번째 컨텐츠</i></span></a>
+                        <a href="#" class="clbi_indicator_btn"><span class="icn"><i class="ir">세번째 컨텐츠</i></span></a>
+                        <div class="clbi_indicator_player">
+                            <a href="#" class="clbi_indipl_stop"><span class="icn"><i class="ir">stop</i></span></a>
+                            <!-- 일시정지 시 노출시켜주세요.
+                            <a href="#" class="clbi_indipl_play"><span class="icn"><i class="ir">play</i></span></a>
+                            -->
+                        </div>
+                    </div>
+                </div><!--cl_bottom_cont-->
+                <!--2016-12-16 추가 -->
+                <a href="#" style="display:block;margin-top:40px;"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/good_data/good_data_main.jpg" width="669" height="89" alt="펑튀는 기업뉴스"></a>
+                <div class="cl_center_cont">
+                    <h2 class="clcc_invest_headtitle"><span class="icn"><i class="ir">프리미엄 투자전략</i></span><i class="ht_topbar"></i></h2>
+                    <div class="clci_w">
+                        <div class="clci_cont_w">
+                            <a href="#" class="clci_cont">
+                                <strong class="clci_title">롤러코스터 中증시, 본격 반등 언제? 롤러코스터 中증시, 본격 반등 언제?</strong>
+                                <span class="clci_text">구지은 아워홈 부사장이 지난 18일 경영에 복귀했습니다. 구 부사장은 지난해 7월 구매식재사업본부장에서 보직 해임됐었는데요...</span>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_252x140.jpg" alt="롤러코스터 中증시, 본격 반등 언제?" class="clci_img" width="252" height="140">
+                            </a>
+                            <h3 class="hide">관련기사</h3>
+                            <ul class="clci_relate">
+                                <li class="clci_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clci_relate_link">위안화 약세 베팅한 헤지펀드들…中 과소 평가? 위안화 약세 베팅한 헤지펀드들…中 과소 평가?</a></li>
+                                <li class="clci_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clci_relate_link">위안화 약세 베팅한 헤지펀드들…中 과소 평가? 위안화 약세 베팅한 헤지펀드들…中 과소 평가?</a></li>
+                                <li class="clci_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clci_relate_link">위안화 약세 베팅한 헤지펀드들…中 과소 평가? 위안화 약세 베팅한 헤지펀드들…中 과소 평가?</a></li>
+                                <li class="clci_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clci_relate_link">위안화 약세 베팅한 헤지펀드들…中 과소 평가? 위안화 약세 베팅한 헤지펀드들…中 과소 평가?</a></li>
+                            </ul>
+                        </div>
+                        <div class="clci_cont_w clci_cont_w_last"><!--clci_cont_w_last 클래스 추가 -->
+                            <a href="#" class="clci_cont">
+                                <strong class="clci_title">롤러코스터 中증시, 본격 반등 언제? 롤러코스터 中증시, 본격 반등 언제?</strong>
+                                <span class="clci_text">구지은 아워홈 부사장이 지난 18일 경영에 복귀했습니다. 구 부사장은 지난해 7월 구매식재사업본부장에서 보직 해임됐었는데요...</span>
+                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_252x140_02.jpg" alt="롤러코스터 中증시, 본격 반등 언제?" class="clci_img clci_img_last" width="252" height="140"><!--class="clci_img clci_img_last" 클래스 추가 -->
+                            </a>
+                            <h3 class="hide">관련기사</h3>
+                            <ul class="clci_relate">
+                                <li class="clci_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clci_relate_link">위안화 약세 베팅한 헤지펀드들…中 과소 평가? 위안화 약세 베팅한 헤지펀드들…中 과소 평가?</a></li>
+                                <li class="clci_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clci_relate_link">위안화 약세 베팅한 헤지펀드들…中 과소 평가? 위안화 약세 베팅한 헤지펀드들…中 과소 평가?</a></li>
+                                <li class="clci_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clci_relate_link">위안화 약세 베팅한 헤지펀드들…中 과소 평가? 위안화 약세 베팅한 헤지펀드들…中 과소 평가?</a></li>
+                                <li class="clci_relate_cont"><i class="l_list_bar icn"></i><a href="#" class="clci_relate_link">위안화 약세 베팅한 헤지펀드들…中 과소 평가? 위안화 약세 베팅한 헤지펀드들…中 과소 평가?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!--cl_center_cont-->
+                <!-- main_bottom_banner_area-->
+                <ul class="cl_bottom_ad">
+                    <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
+                    <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
+                    <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
+                </ul><!--// main_bottom_banner_area-->
+            </div><!--content_left-->
+            <div class="cont_right">
+                <div class="cr_market_data">
+                    <h2 class="hide">실시간 시황 데이터</h2>
+                    <ul class="crmd_list"><!-- 활성화시 current -->
+                        <li class="crmd_cont_domestic current"><a href="#" class="crmd_title">국내증시</a>
+                            <div class="crmd_data_w">
+                                <ul class="crmd_data_list">
+                                    <li class="crmd_data_cont on"><!--활성화시 on -->
+                                        <strong class="crmd_dc_title">KOSPI <span class="crmd_dc_day">01&#47;29 14:53</span></strong>
+                                        <em class="crmd_dc_data">1,906.94 <span class="up_bold icn"><i class="ir">상승</i></span> <span class="crmd_dc_per">0.00%</span></em>
+                                    </li>
+                                    <li class="crmd_data_cont">
+                                        <strong class="crmd_dc_title">KOSDAQ <span class="crmd_dc_day">02&#47;18 장마감</span></strong>
+                                        <em class="crmd_dc_data">1,906.94 <span class="down_bold icn"><i class="ir">하락</i></span> <span class="crmd_dc_per">0.00%</span></em>
+                                    </li>
+                                </ul>
+                                <div class="crmd_btn_paging">
+                                    <strong class="crmd_bp_num">1</strong>&#47;<span class="crmb_bp_page">2</span>
+                                    <a href="#" class="crmd_bp_left icn" title="이전 보기"><i class="ir">이전</i></a><a href="#" class="crmd_bp_right icn" title="다음 보기"><i class="ir">다음</i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="crmd_cont_overseas"><a href="#" class="crmd_title">해외증시</a>
+                            <div class="crmd_data_w">
+                                <ul class="crmd_data_list">
+                                    <li class="crmd_data_cont">
+                                        <strong class="crmd_dc_title">DOWJONES</strong>
+                                        <em class="crmd_dc_data">1,906.94 <span class="up_bold icn"><i class="ir">상승</i></span> <span class="crmd_dc_per">0.00%</span></em>
+                                    </li>
+                                    <li class="crmd_data_cont">
+                                        <strong class="crmd_dc_title">NASDAQ</strong>
+                                        <em class="crmd_dc_data">1,906.94 <span class="down_bold icn"><i class="ir">하락</i></span> <span class="crmd_dc_per">0.00%</span></em>
+                                    </li>
+                                </ul>
+                                <div class="crmd_btn_paging">
+                                    <strong class="crmd_bp_num">1</strong>&#47;<span class="crmb_bp_page">2</span>
+                                    <a href="#" class="crmd_bp_left icn" title="이전 보기"><i class="ir">이전</i></a><a href="#" class="crmd_bp_right icn" title="다음 보기"><i class="ir">다음</i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="crmd_cont_exchange"><a href="#" class="crmd_title">환율</a>
+                            <div class="crmd_data_w">
+                                <ul class="crmd_data_list">
+                                    <li class="crmd_data_cont">
+                                        <strong class="crmd_dc_title">미국 USD</strong>
+                                        <p class="crmd_dc_text">
+                                            <em class="crmd_dc_data">1,229.50 <span class="up_thin icn"></span></em>
+                                            <strong class="crmd_dc_per">1.50 <span class="up_bold icn"><i class="ir">상승</i></span></strong>
+                                        </p>
+                                    </li>
+                                    <li class="crmd_data_cont">
+                                        <strong class="crmd_dc_title">유럽연합 EUR</strong>
+                                        <p class="crmd_dc_text">
+                                            <em class="crmd_dc_data">1,368.93 <span class="down_thin icn"></span></em>
+                                            <strong class="crmd_dc_per">-0.65 <span class="down_bold icn"><i class="ir">감소</i></span></strong>
+                                        </p>
+                                    </li>
+                                    <li class="crmd_data_cont">
+                                        <strong class="crmd_dc_title">일본 JPY 100</strong>
+                                        <p class="crmd_dc_text">
+                                            <em class="crmd_dc_data">1,229.50 <span class="up_thin icn"></span></em>
+                                            <strong class="crmd_dc_per">1.50 <span class="up_bold icn"><i class="ir">상승</i></span></strong>
+                                        </p>
+                                    </li>
+                                    <li class="crmd_data_cont">
+                                        <strong class="crmd_dc_title">중국원화 CNY</strong>
+                                        <p class="crmd_dc_text">
+                                            <em class="crmd_dc_data">1,229.50 <span class="up_thin icn"></span></em>
+                                            <strong class="crmd_dc_per">1.50 <span class="up_bold icn"><i class="ir">상승</i></span></strong>
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="crmd_btn_paging">
+                                    <strong class="crmd_bp_num">1</strong>&#47;<span class="crmb_bp_page">4</span>
+                                    <a href="#" class="crmd_bp_left icn" title="이전 보기"><i class="ir">이전</i></a><a href="#" class="crmd_bp_right icn" title="다음 보기"><i class="ir">다음</i></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div><!--cr_market_data-->
+                <div class="cr_promotion_bnr">
+                    <h2 class="hide">프로모션 배너</h2>
+                    <ul class="crpb_list current"><!-- 활성화 current -->
+                        <li class="crpb_cont"><a href="#" class="crpb_link"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_promotion01.jpg" alt="이미지 텍스트 적어주세요" class="crpb_img" width="250" height="89"></a></li>
+                        <li class="crpb_cont"><a href="#" class="crpb_link"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_promotion02.jpg" alt="이미지 텍스트 적어주세요" class="crpb_img" width="250" height="89"></a></li>
+                    </ul>
+                    <ul class="crpb_list">
+                        <li class="crpb_cont"><a href="#" class="crpb_link"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_promotion01.jpg" alt="이미지 텍스트 적어주세요" class="crpb_img" width="250" height="89"></a></li>
+                        <li class="crpb_cont"><a href="#" class="crpb_link"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_promotion02.jpg" alt="이미지 텍스트 적어주세요" class="crpb_img" width="250" height="89"></a></li>
+                    </ul>
+                    <div class="crpb_indicator_w">
+                        <a href="#" class="crpb_indicator_btn on"><span class="icn"><i class="ir">첫번째 컨텐츠</i></span></a>
+                        <a href="#" class="crpb_indicator_btn"><span class="icn"><i class="ir">두번째 컨텐츠</i></span></a>
+                        <div class="crpb_indicator_player">
+                            <a href="#" class="crpb_indipl_stop"><span class="icn"><i class="ir">stop</i></span></a>
+                            <!-- 일시정지시 노출시켜주세요.
+                            <a href="#" class="crpb_indipl_play"><span class="icn"><i class="ir">play</i></span></a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="cr_financial">
+                    <h2 class="crfg_headtitle sc_file_title"><span class="icn"><i class="ir">SBSCNBC짭짤영상</i></span><i class="ht_topbar"></i></h2><!-- 2017-03-03 h2태그에 sc_file_title 클래스 추가 -->
+                    <a href="#" class="crfn_cont">
+                        <strong class="crfn_title">바클레이즈 "연준, 12월에 금리 인상할 것"</strong>
+                        <span class="crfn_text">[CEO말말말] 박성택중기회장 "소상공인 무료 세무법률지원 강화" 김진국 하나투어 사장 알리 바바와 협의 김진국 하나투어 사장 알리 바바와 협의 ...</span>
+                        <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_100x100.jpg" alt="기사 타이틀 적어주세요" class="crfn_img" width="100" height="100">
+                    </a>
+                    <a href="#" class="crfn_more">더보기 <i class="icn"></i></a>
+                </div>
+                <div class="cr_ad_bnr">
+                    <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/ad_main.jpg" alt="광고 이미지" width="250" height="250" class="crad_img">
+                </div>
+                <div class="cr_hot_issue">
+                    <h2 class="crhi_headtitle"><a href="#" class="crhih_link"><span class="icn"><i class="ir">HOT ISSUE</i></span></a><a href="#" class="crhi_title"><strong>2016년 연말정산</strong></a><i class="ht_topbar"></i></h2><!-- 160510 수정 -->
+                    <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/thumb_issue.jpg" alt="2016년 연말정산" class="crhi_img" width="250" height="140">
+                    <ul class="crhi_lbar_list">
+                        <li class="crhi_lbar_cont"><i class="horizon_lbar"></i><a href="#" class="crhi_lbar_link">[CEO말말말] 김진국 하나투어 사장 사장 사장 사장</a></li>
+                        <li class="crhi_lbar_cont"><i class="horizon_lbar"></i><a href="#" class="crhi_lbar_link">[CEO말말말] 김진국 하나투어 사장 사장 사장 사장</a></li>
+                        <li class="crhi_lbar_cont"><i class="horizon_lbar"></i><a href="#" class="crhi_lbar_link">[CEO말말말] 김진국 하나투어 사장 사장 사장 사장</a></li>
+                    </ul>
+                </div>
+                <div class="cr_contact_cnbc">
+                    <h2 class="crcc_headtitle"><span class="icn"><i class="ir">SBSCNBC를 만나는 다양한 방법</i></span><i class="ht_topbar"></i></h2>
+                    <ul class="crcc_list">
+                        <li class="crcc_cont_facebook"><a href="https://www.facebook.com/SBSCNBC" class="crcc_link" target="_blank" title="SBSCNBC 페이스북으로 새창이동">페이스북<i class="icn"></i></a></li>
+                        <li class="crcc_cont_npost"><a href="http://m.post.naver.com/my.nhn?memberNo=7497529" class="crcc_link" target="_blank" title="SBSCNBC 네이버포스트로 새창이동">네이버포스트<i class="icn"></i></a></li>
+                        <li class="crcc_cont_mapp"><a href="https://itunes.apple.com/kr/app/sbs-cnbc/id425106890?mt=8" class="crcc_link" target="_blank" title="SBSCNBC 모바일앱 다운 페이지로 새창이동">네이버TV캐스트<i class="icn"></i></a></li>
+                        <li class="crcc_cont_naver"><a href="http://newsstand.naver.com/374" class="crcc_link" target="_blank" title="네이버 뉴스스탠드 SBSCNBC 페이지로 새창이동">네이버뉴스스텐드<i class="icn"></i></a></li>
+                    </ul>
+                    <div class="cr_ad_bnr">
+                        <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/ad_main.jpg" alt="광고 이미지" width="250" height="250" class="crad_img">
+                    </div>
+                    <div class="cr_ad_bnr">
+                        <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/rbn_ad_01.jpg" alt="광고 이미지" width="250" height="90" class="crad_img">
+                    </div>
+                </div>
+                <!--AD영역입니다. AD입력시 class를 제외한 style과 AD텍스트를 삭제 후 넣어주세요 :) <div class="cr_ad_bnr"></div> -->
+                <!--<div class="cr_ad_bnr" style="width:250px;height:89px;background-color:#2184c7;color:#fff;text-align:center;line-height:89px;font-weight:bold;">AD</div>-->
+            </div><!--content_right-->
+            <i class="cont_right_border"></i>
+        </div><!--// #content-->
+    </div><!--// #container -->
+    <!-- 하단 공통 시작 -->
+    <div class="content_bottom">
+        <div class="content_bottom_inner">
+            <div class="cb_cnbc_program">
+                <h2 class="cbcp_headtitle"><span class="icn"><i class="ir">SBSCNBC 프로그램</i></span><i class="ht_topbar"></i></h2>
+                <ul class="cbcp_w">
+                    <li class="cbcp_list">
+                        <strong class="cbcp_title">뉴스</strong><!--160513 a태그 ->strong으로 변경 -->
+                        <ul class="cbcp_cont">
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">경제와이드 모닝벨</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">경제와이드 이슈&amp;</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">경제와이드 백브리핑 시시각각</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">뉴스프리즘</a></li>
+                        </ul>
+                    </li>
+                    <li class="cbcp_list">
+                        <strong class="cbcp_title">재테크</strong><!--160513 a태그 ->strong으로 변경 -->
+                        <ul class="cbcp_cont">
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">스톡챔피언 WEEKDAY</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">스톡챔피언 WEEKEND</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">플랜100세</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">부동산 따라잡기</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">부동산 따라잡기 WEEKEND</a></li>
+                        </ul>
+                    </li>
+                    <li class="cbcp_list">
+                        <strong href="#" class="cbcp_title">CEO</strong><!--160513 a태그 ->strong으로 변경 -->
+                        <ul class="cbcp_cont">
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">정지영의 블루베리</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">CEO 취재파일</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">CEO 리포트</a></li>
+                        </ul>
+                    </li>
+                    <li class="cbcp_list">
+                        <strong href="#" class="cbcp_title">교양</strong><!--160513 a태그 ->strong으로 변경 -->
+                        <ul class="cbcp_cont">
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">식객남녀 잘 먹었습니다</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">최고의 행복 건강플러스</a></li>
+                            <li class="cbcp_text"><a href="#" class="cbcp_link">KOREA REPORT</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--cb_cnbc_program-->
+            <div class="cb_cnbc_notice">
+                <h2 class="cbcn_headtitle"><span class="icn"><i class="ir">공지사항</i></span><i class="ht_topbar"></i>
+                    <a href="#" class="crfn_more cbcn_noti_more">더보기 <i class="icn"></i></a><!--160513 더보기 추가 -->
+                </h2>
+                <ul class="cbcn_lbar_list">
+                    <li class="cbcn_lbar_cont"><i class="horizon_lbar_blue"></i><a href="#" class="cbcn_lbar_link">2015 SBS 미디어넷 하반기 경력사원 모집</a></li>
+                    <li class="cbcn_lbar_cont"><i class="horizon_lbar_blue"></i><a href="#" class="cbcn_lbar_link">2015 SBS 미디어넷 하반기 경력사원 모집모집모집</a></li>
+                    <li class="cbcn_lbar_cont"><i class="horizon_lbar_blue"></i><a href="#" class="cbcn_lbar_link">2015 SBS 미디어넷 하반기 경력사원 모집 모집</a></li>
+                    <li class="cbcn_lbar_cont"><i class="horizon_lbar_blue"></i><a href="#" class="cbcn_lbar_link">2015 SBS 미디어넷 하반기 경력사원 모집</a></li>
+                    <li class="cbcn_lbar_cont"><i class="horizon_lbar_blue"></i><a href="#" class="cbcn_lbar_link">2015 SBS 미디어넷 하반기 경력사원 모집</a></li>
+                </ul>
+            </div><!--cb_cnbc_notice-->
+        </div><!--content_bottom_inner-->
+    </div>
+    <!-- footer-->
+    <div id="footer">
+        <div class="footer_inner">
+            <h2 class="hide">SBSCNBC 관련페이지</h2>
+            <ul class="fnb_list">
+                <li class="fnb_cont_odd"><a href="#" class="fnb_link">채널안내</a></li>
+                <li class="fnb_cont_even"><a href="#" class="fnb_link">ABOUT SBSCNBC</a></li>
+                <li class="fnb_cont_odd"><a href="#" class="fnb_link">이용약관</a></li>
+                <li class="fnb_cont_even"><a href="#" class="fnb_link">개인정보취급방침</a></li>
+                <li class="fnb_cont_odd"><a href="#" class="fnb_link">고객센터</a></li>
+                <li class="fnb_cont_even"><a href="#" class="fnb_link">사이트 맵</a></li>
+            </ul>
+            <div class="fi_right">
+                <h3 class="hide">SBS콘텐츠허브와 SBS플러스 정보</h3>
+                <address class="fi_addr_hub">서울특별시 마포구 상암산로 82 SBS프리즘타워 15, 16층 (주)에스비에스콘텐츠허브 대표이사 이상규 <a href="#" class="fi_addr_link">찾아오시는길</a><br>
+                    SBS콘텐츠허브 고객센터(홈페이지 관련 문의)02-2001-6600 SBSCNBC 방송사 02-6938-1600 <a href="mailto:webmaster@sbs.co.kr" title="메일클라이언트가 실행됩니다" class="fi_addr_link">E-mail</a><br>
+                    사업자 번호 116-81-76255 통신판매업 신고번호양천 제41호부가통신사업 신고번호 2566호</address>
+                <address class="fi_addr_plus">서울특별시 마포구 상암산로 82 SBS프리즘타워 10층 (주)에스비에스플러스 대표이사 조윤증 <a href="#" class="fi_addr_link">찾아오시는길</a><br>
+                    고객센터 SBS콘텐츠허브 02-2001-6600 SBSCNBC 방송사 02-6938-1600 <a href="mailto:webmaster@sbs.co.kr" title="메일클라이언트가 실행됩니다" class="fi_addr_link">E-mail</a></address>
+                <p class="copyright">COPYRIGHT &copy; SBSCONTENTSHUB &amp; SBSPLUS. ALL RIGHTS RESERVED.</p>
+                <h3 class="hide">SBSCNBC 관련사이트</h3>
+                <div class="site_family">
+                    <strong class="site_title"><a href="#" class="site_link">SBS Family<i class="site_tit_btn icn"></i></a></strong><!--활성화시 on-->
+                    <div class="site_list_w"><!--활성화시 on-->
+                        <ul class="site_list">
+                            <li class="site_cont"><a href="#" class="site_link" target="_blank" title="새창이동">SBS 미디어홀딩스</a></li>
+                            <li class="site_cont"><a href="#" class="site_link" target="_blank" title="새창이동">SBS 콘텐츠허브</a></li>
+                            <li class="site_cont"><a href="#" class="site_link" target="_blank" title="새창이동">SBS 플러스</a></li>
+                        </ul>
+                    </div>
+                </div><!--// site_family -->
+                <div class="site_local">
+                    <strong class="site_title"><a href="#" class="site_link">지역민영방송<i class="site_tit_btn icn"></i></a></strong><!--활성화시 on -->
+                    <div class="site_list_w"><!--활성화시 on-->
+                        <ul class="site_list">
+                            <li class="site_cont"><a href="#" class="site_link" target="_blank" title="새창이동">강원 민방</a></li>
+                            <li class="site_cont"><a href="#" class="site_link" target="_blank" title="새창이동">광주 방송</a></li>
+                            <li class="site_cont"><a href="#" class="site_link" target="_blank" title="새창이동">대구 방송</a></li>
+                        </ul>
+                    </div>
+                </div><!--site_local-->
+            </div><!--fi_right-->
+            <h3 class="hide">SBSCNBC SNS</h3>
+            <ul class="fi_sns">
+                <li class="fis_cont_twitter"><a href="https://twitter.com/sbscnbc" target="_blank" class="fis_link icn" title="SBSCNBC 트위터로 새창이동"><i class="ir">트위터</i></a></li>
+                <li class="fis_cont_facebook"><a href="https://www.facebook.com/SBSCNBC" target="_blank" class="fis_link icn" title="SBSCNBC 페이스북으로 새창이동"><i class="ir">페이스북</i></a></li>
+            </ul>
+            <i class="fi_logo icn"></i>
+        </div><!--// footer_inner -->
+    </div>
+    <!--//footer-->
+</div><!--// #wrap -->
+<script type="text/javascript">
+    //코딩 확인용 임시 스크립트
+    $(document).ready(function(){
+        gnbView();
+        poscrollTop();
+        siteLink();
+    });
+</script>
+</body>
+</html>
