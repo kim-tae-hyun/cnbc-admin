@@ -52,11 +52,11 @@ class MainContainer extends Base {
                             <div class="cl_center_cont">
                                 <div id="${this.id.premium}"></div>
                             </div>
-                            <ul class="cl_bottom_ad">
+                           <ul class="cl_bottom_ad">
                                 <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
                                 <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
                                 <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
-                            </ul><!--// main_bottom_banner_area-->
+                            </ul>
                         </div>
                         <div class="cont_right"></div>
                         <i class="cont_right_border"></i>
@@ -76,6 +76,7 @@ class MainContainer extends Base {
         let httpService = new HttpService('/api/cnbc/home/index.json');
         httpService.callback.succeeded = (data) => {
             CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN = data;
+
             this.model.top = new MainTop(this.id.top);
             this.model.top.initialize();
             this.model.top.render();
@@ -91,6 +92,10 @@ class MainContainer extends Base {
             this.model.program = new MainProgram(this.id.program);
             this.model.program.initialize();
             this.model.program.render();
+
+            this.model.premium = new MainPremium(this.id.premium);
+            this.model.premium.initialize();
+            this.model.premium.render();
 
             super.render();
         };
