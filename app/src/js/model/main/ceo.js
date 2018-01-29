@@ -31,7 +31,7 @@ class MainCEO extends Base {
                             <img src="${this.view.ceo.imageUrl}" alt="${this.view.ceo.title}" class="clct_img" width="286" height="162"><!--alt값에 기사 타이틀과 동일하게 적어주세요-->
                             <span class="clct_reporter"><i class="vertical_bar_blue"></i>${this.view.ceo.reporter} 기자</span>
                         </a>
-                        <h3 class="hide">취재파일 관련기사</h3>
+                        <h3 class="hide">CEO취재파일 관련기사</h3>
                         <ul class="clceo_relate">
                             ${getCeoListTemplate()}
                         </ul>
