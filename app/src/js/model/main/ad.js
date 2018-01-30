@@ -12,7 +12,7 @@ class MainAD extends Base {
             right : {}
         }
 
-        this.target.left.middle = $(`#${this.id.ad.left.middle}`);
+        this.target.left.middle = $(`#${parentId.left.middle}`);
         this.target.left.bottom = $(`#${parentId.left.bottom}`);
         this.target.right.middle = $(`#${parentId.right.middle}`);
         this.target.right.bottom = $(`#${parentId.right.bottom}`);
@@ -20,18 +20,37 @@ class MainAD extends Base {
         this.model = {};
 
         this.leftMiddleBind = () => {
-            let getCeoListTemplate = () => {
-                // let ceoListTemplate = "";
-                // if(!_.isUndefined(this.view.ceo.relateArticle)) {
-                //     this.view.ceo.relateArticle.forEach(( relateArticle , relateIndex, relateArticles ) => {
-                //         ceoListTemplate += `<li class="clc_relate_cont"><i class="l_list_bar icn"></i><a href="http://sbscnbc.sbs.co.kr/read.jsp?pmArticleId=${relateArticle.articleId}" class="clc_relate_link">${relateArticle.title}</a></li>`;
-                //     });
-                // }
-                // return ceoListTemplate;
-            }
+            let adSize = 1;
+            let leftMiddle = _.shuffle(_.filter(this.view.ad.left.middle, function(item){return item.service == "Y"})).slice( 0, adSize );
+            let leftMiddleTemplate = "";
+            leftMiddle.forEach((ad, adIndex) => {
+                if(adIndex == adSize) {
+                    return false;
+                };
 
-            this.target.left.middle.html(`<a href="http://www.iboos.co.kr" style="display:block;margin-top:40px;"><img src="http://img.sbs.co.kr/sbscnbc/img/sbscnbc_main_banner.jpg" width="670" height="103" alt="SBSCNBC 부스 부동산스토리"></a>`);
+                leftMiddleTemplate += `<a href="${ad.linkUrl}" style="display:block;margin-top:40px;" target="${ad.target}"><img src="${ad.imageUrl}" width="670" height="103" alt="${ad.title}"></a>`;
+            });
+            this.target.left.middle.html(leftMiddleTemplate);
         };
+
+        this.leftBottomBind = () => {
+            let adSize = 3;
+            let leftBottom = _.shuffle(_.filter(this.view.ad.left.bottom, function(item){return item.service == "Y"})).slice( 0, adSize );
+            let leftBottomTemplate = `<ul>`
+
+            leftBottom.forEach((ad, adIndex) => {
+                if(adIndex == adSize) {
+                    return false;
+                };
+
+                leftBottomTemplate += `<li class="clb_ad_list"><a href="${ad.linkUrl}" target="${ad.target}"><img src="${ad.imageUrl}" alt="${ad.title}" width="216" height="180"></a></li>`;
+            });
+
+            leftBottomTemplate += `</ul>`;
+            this.target.left.bottom.html(leftBottomTemplate);
+        };
+
+
     }
 
     initialize() {
@@ -41,6 +60,7 @@ class MainAD extends Base {
 
     render() {
         this.leftMiddleBind();
+        this.leftBottomBind();
         super.render();
     }
 }
