@@ -3,58 +3,42 @@ class MainAD extends Base {
         super();
 
         this.id = {
-            self: 'cnbc-admin-main-ceo-self',
+            self: 'cnbc-admin-main-ad-self',
             ad : parentId
         };
 
         this.target = {
-            left : {},
-            right : {}
+            left: {
+                middle: {},
+                bottom: {
+                    first: {},
+                    second: {},
+                    third: {}
+                },
+                right: {}
+            }
         }
 
-        this.target.left.middle = $(`#${parentId.left.middle}`);
-        this.target.left.bottom = $(`#${parentId.left.bottom}`);
-        this.target.right.middle = $(`#${parentId.right.middle}`);
-        this.target.right.bottom = $(`#${parentId.right.bottom}`);
+        this.target.left.middle = $(`#${parentId.bindarea.left.middle}`);
+        this.target.left.bottom.first = $(`#${parentId.bindarea.left.bottom.first}`);
+        this.target.left.bottom.second = $(`#${parentId.bindarea.left.bottom.second}`);
+        this.target.left.bottom.third = $(`#${parentId.bindarea.left.bottom.third}`);
 
         this.model = {};
 
         this.leftMiddleBind = () => {
-            let adSize = 1;
-            let leftMiddle = _.shuffle(_.filter(this.view.ad.left.middle, function(item){return item.service == "Y"})).slice( 0, adSize );
-            let leftMiddleTemplate = "";
-            leftMiddle.forEach((ad, adIndex) => {
-                if(adIndex == adSize) {
-                    return false;
-                };
-
-                leftMiddleTemplate += `<a href="${ad.linkUrl}" style="display:block;margin-top:40px;" target="${ad.target}"><img src="${ad.imageUrl}" width="670" height="103" alt="${ad.title}"></a>`;
-            });
-            this.target.left.middle.html(leftMiddleTemplate);
+            this.target.left.middle.html($(`#${parentId.temp.left.middle}`).html());
         };
 
         this.leftBottomBind = () => {
-            let adSize = 3;
-            let leftBottom = _.shuffle(_.filter(this.view.ad.left.bottom, function(item){return item.service == "Y"})).slice( 0, adSize );
-            let leftBottomTemplate = `<ul>`
-
-            leftBottom.forEach((ad, adIndex) => {
-                if(adIndex == adSize) {
-                    return false;
-                };
-
-                leftBottomTemplate += `<li class="clb_ad_list"><a href="${ad.linkUrl}" target="${ad.target}"><img src="${ad.imageUrl}" alt="${ad.title}" width="216" height="180"></a></li>`;
-            });
-
-            leftBottomTemplate += `</ul>`;
-            this.target.left.bottom.html(leftBottomTemplate);
+            this.target.left.bottom.first.html($(`#${parentId.temp.left.bottom.first}`).html());
+            this.target.left.bottom.second.html($(`#${parentId.temp.left.bottom.second}`).html());
+            this.target.left.bottom.third.html($(`#${parentId.temp.left.bottom.third}`).html());
         };
-
-
     }
 
     initialize() {
-        this.view.ad = CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN.ad;
+
         super.initialize();
     }
 

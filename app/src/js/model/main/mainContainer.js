@@ -7,20 +7,52 @@ class MainContainer extends Base {
         this.id = {
             self: 'cnbc-admin-main-self',
             top: 'cnbc-admin-main-top',
-            ad :{
+            content : {
                 left : {
-                    middle : 'cnbc-admin-main-ad-left-middle',
-                    bottom : 'cnbc-admin-main-ad-left-bottom'
+                    popular : 'cnbc-admin-main-content-left-popular',
+                    ceo : 'cnbc-admin-main-content-left-ceo',
+                    program : 'cnbc-admin-main-content-left-program',
+                    premium : 'cnbc-admin-main-content-left-premium'
                 },
                 right : {
-                    middle : 'cnbc-admin-main-ad-right-middle',
-                    bottom : 'cnbc-admin-main-ad-right-bottom'
+                    market : 'cnbc-admin-main-content-right-market',
+                    promotion : 'cnbc-admin-main-content-right-promotion',
+                    financial : 'cnbc-admin-main-content-right-financial',
+                    ad : 'cnbc-admin-main-content-right-ad',
+                    hot_issue : 'cnbc-admin-main-content-right-hot_issue',
+                    contact : 'cnbc-admin-main-content-right-contact'
                 }
             },
-            popular : 'cnbc-admin-main-popular',
-            ceo : 'cnbc-admin-main-ceo',
-            program : 'cnbc-admin-main-program',
-            premium : 'cnbc-admin-main-premium',
+            ad :{
+                bindarea : {
+                    left : {
+                        middle : 'cnbc-admin-main-ad-bindarea-left-middle',
+                        bottom : {
+                            first : 'cnbc-admin-main-ad-bindarea-left-bottom-first',
+                            second : 'cnbc-admin-main-ad-bindarea-left-bottom-second',
+                            third : 'cnbc-admin-main-ad-bindarea-left-bottom-third'
+                        }
+                    },
+                    right : {
+                        middle : 'cnbc-admin-main-ad-bindarea-right-middle',
+                        bottom : 'cnbc-admin-main-ad-bindarea-right-bottom'
+                    }
+                },
+                temp : {
+                    left : {
+                        middle : 'cnbc-admin-main-ad-temp-left-middle',
+                        bottom : {
+                            first : 'cnbc-admin-main-ad-temp-left-bottom-first',
+                            second : 'cnbc-admin-main-ad-temp-left-bottom-second',
+                            third : 'cnbc-admin-main-ad-temp-left-bottom-third'
+                        }
+                    },
+                    right : {
+                        middle : 'cnbc-admin-main-ad-temp-right-middle',
+                        bottom : 'cnbc-admin-main-ad-temp-right-bottom'
+                    }
+                }
+            },
         };
 
         this.model = {};
@@ -47,27 +79,34 @@ class MainContainer extends Base {
                     <div id="content" class="main_content_w">
                         <div class="cont_left">
                             <div class="cl_top_cont">
-                                <div id="${this.id.popular}"></div>
-                                <div id="${this.id.ceo}"></div>    
+                                <div id="${this.id.content.left.popular}"></div>
+                                <div id="${this.id.content.left.ceo}"></div>    
                             </div>
                             <div class="top_news_bn">
-                                <div id="${this.id.ad.left.middle}"></div>
+                                <div id="${this.id.ad.bindarea.left.middle}"></div>
                             </div>
                             <div class="cl_bottom_cont">
-                                <div id="${this.id.program}"></div>
+                                <div id="${this.id.content.left.program}"></div>
                             </div>
                             <div class="cl_center_cont">
-                                <div id="${this.id.premium}"></div>
+                                <div id="${this.id.content.left.premium}"></div>
                             </div>
                            <ul class="cl_bottom_ad">
-                                <div id="${this.id.ad.left.bottom}">
-                                    <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
-                                    <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
-                                    <li class="clb_ad_list"><a href="" target="blank"><img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/banner/mbn_ad_01.jpg" alt="광고 타이틀넣어주세요" width="216" height="180"></a></li>
-                                </div>
+                                <li class="clb_ad_list" id="${this.id.ad.bindarea.left.bottom.first}"></li>
+                                <li class="clb_ad_list" id="${this.id.ad.bindarea.left.bottom.second}"></li>
+                                <li class="clb_ad_list" id="${this.id.ad.bindarea.left.bottom.third}"></li>
                             </ul>
                         </div>
-                        <div class="cont_right"></div>
+                        <div class="cont_right">
+                            <div class="cr_market_data">
+                                <div id="${this.id.content.right.market}"></div>
+                            </div>
+                            <div class="cr_promotion_bnr"></div>
+                            <div class="cr_financial"></div>
+                            <div class="cr_ad_bnr"></div>
+                            <div class="cr_hot_issue"></div>
+                            <div class="cr_contact_cnbc"></div>
+                        </div>
                         <i class="cont_right_border"></i>
                     </div>
                 </div>
@@ -90,25 +129,29 @@ class MainContainer extends Base {
             this.model.top.initialize();
             this.model.top.render();
 
-            this.model.popular = new MainPopular(this.id.popular);
+            this.model.popular = new MainPopular(this.id.content.left.popular);
             this.model.popular.initialize();
             this.model.popular.render();
 
-            this.model.ceo = new MainCEO(this.id.ceo);
+            this.model.ceo = new MainCEO(this.id.content.left.ceo);
             this.model.ceo.initialize();
             this.model.ceo.render();
 
-            this.model.program = new MainProgram(this.id.program);
+            this.model.program = new MainProgram(this.id.content.left.program);
             this.model.program.initialize();
             this.model.program.render();
 
-            this.model.premium = new MainPremium(this.id.premium);
+            this.model.premium = new MainPremium(this.id.content.left.premium);
             this.model.premium.initialize();
             this.model.premium.render();
 
             this.model.ad = new MainAD(this.id.ad);
             this.model.ad.initialize();
             this.model.ad.render();
+
+            this.model.market = new MainMarket(this.id.content.right.market);
+            this.model.market.initialize();
+            this.model.market.render();
 
             super.render();
         };
