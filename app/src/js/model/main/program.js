@@ -98,7 +98,6 @@ class MainProgram extends Base {
                 slidesPerView: 1,
                 loop: true,
                 observer: true,
-                //simulateTouch : false
             }).on('slideChange', function () {
             });
         }
