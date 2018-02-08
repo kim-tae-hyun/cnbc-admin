@@ -446,66 +446,66 @@
     }
   ],
   "market": {
-    "KorStock": [
+    "korStock": [
       {
-        "StockName": "KOSPI",
-        "CurrentPoint": "2,567.74",
-        "UpDownPoint": "30.45",
-        "UpDownRate": "-1.19",
-        "UpDownFlag": "2"
+        "stockName": "KOSPI",
+        "currentPoint": "2,567.74",
+        "upDownPoint": "30.45",
+        "upDownRate": "-1.19",
+        "upDownFlag": "2"
       },
       {
-        "StockName": "KOSDAQ",
-        "CurrentPoint": "920.96",
-        "UpDownPoint": "6.09",
-        "UpDownRate": "-0.66",
-        "UpDownFlag": "2"
+        "stockName": "KOSDAQ",
+        "currentPoint": "920.96",
+        "upDownPoint": "6.09",
+        "upDownRate": "-0.66",
+        "upDownFlag": "2"
       }
     ],
-    "ForStock": [
+    "forStock": [
       {
-        "StockName": "DowJones Industrial",
-        "CurrentPoint": "2,567.74",
-        "UpDownPoint": "30.45",
-        "UpDownRate": "-1.19",
-        "UpDownFlag": "2"
+        "stockName": "DowJones Industrial",
+        "currentPoint": "2,567.74",
+        "upDownPoint": "30.45",
+        "upDownRate": "-1.19",
+        "upDownFlag": "2"
       },
       {
-        "StockName": "NASDAQ Composite",
-        "CurrentPoint": "920.96",
-        "UpDownPoint": "6.09",
-        "UpDownRate": "-0.66",
-        "UpDownFlag": "2"
+        "stockName": "NASDAQ Composite",
+        "currentPoint": "920.96",
+        "upDownPoint": "6.09",
+        "upDownRate": "-0.66",
+        "upDownFlag": "2"
       }
     ],
-    "Exchange": [
+    "exchange": [
       {
-        "StockName": "USD",
-        "CurrentPoint": "2,567.74",
-        "UpDownPoint": "30.45",
-        "UpDownRate": "-1.19",
-        "UpDownFlag": "2"
+        "stockName": "USD",
+        "currentPoint": "2,567.74",
+        "upDownPoint": "30.45",
+        "upDownRate": "-1.19",
+        "upDownFlag": "2"
       },
       {
-        "StockName": "JPY",
-        "CurrentPoint": "920.96",
-        "UpDownPoint": "6.09",
-        "UpDownRate": "-0.66",
-        "UpDownFlag": "2"
+        "stockName": "JPY",
+        "currentPoint": "920.96",
+        "upDownPoint": "6.09",
+        "upDownRate": "-0.66",
+        "upDownFlag": "2"
       },
       {
-        "StockName": "EUR",
-        "CurrentPoint": "2,567.74",
-        "UpDownPoint": "30.45",
-        "UpDownRate": "-1.19",
-        "UpDownFlag": "2"
+        "stockName": "EUR",
+        "currentPoint": "2,567.74",
+        "upDownPoint": "30.45",
+        "upDownRate": "-1.19",
+        "upDownFlag": "2"
       },
       {
-        "StockName": "CNY",
-        "CurrentPoint": "920.96",
-        "UpDownPoint": "6.09",
-        "UpDownRate": "-0.66",
-        "UpDownFlag": "2"
+        "stockName": "CNY",
+        "currentPoint": "920.96",
+        "upDownPoint": "6.09",
+        "upDownRate": "-0.66",
+        "upDownFlag": "2"
       }
     ]
   }
