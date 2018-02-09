@@ -37,20 +37,6 @@ class MainContainer extends Base {
                         middle : 'cnbc-admin-main-ad-bindarea-right-middle',
                         bottom : 'cnbc-admin-main-ad-bindarea-right-bottom'
                     }
-                },
-                temp : {
-                    left : {
-                        middle : 'cnbc-admin-main-ad-temp-left-middle',
-                        bottom : {
-                            first : 'cnbc-admin-main-ad-temp-left-bottom-first',
-                            second : 'cnbc-admin-main-ad-temp-left-bottom-second',
-                            third : 'cnbc-admin-main-ad-temp-left-bottom-third'
-                        }
-                    },
-                    right : {
-                        middle : 'cnbc-admin-main-ad-temp-right-middle',
-                        bottom : 'cnbc-admin-main-ad-temp-right-bottom'
-                    }
                 }
             },
         };
@@ -101,7 +87,9 @@ class MainContainer extends Base {
                             <div class="cr_market_data">
                                 <div id="${this.id.content.right.market}"></div>
                             </div>
-                            <div class="cr_promotion_bnr"></div>
+                            <div class="cr_promotion_bnr">
+                                <li class="clb_ad_list" id="${this.id.ad.bindarea.right.middle}"></li>
+                            </div>
                             <div class="cr_financial"></div>
                             <div class="cr_ad_bnr"></div>
                             <div class="cr_hot_issue"></div>

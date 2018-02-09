@@ -4,36 +4,35 @@ class MainAD extends Base {
 
         this.id = {
             self: 'cnbc-admin-main-ad-self',
-            ad : parentId
+            ad : parentId,
+            temp : {
+                left : {
+                    middle : 'cnbc-admin-main-ad-temp-left-middle',
+                    bottom : {
+                        first : 'cnbc-admin-main-ad-temp-left-bottom-first',
+                        second : 'cnbc-admin-main-ad-temp-left-bottom-second',
+                        third : 'cnbc-admin-main-ad-temp-left-bottom-third'
+                    }
+                },
+                right : {
+                    middle : 'cnbc-admin-main-ad-temp-right-middle',
+                    bottom : 'cnbc-admin-main-ad-temp-right-bottom'
+                }
+            }
         };
 
-        this.target = {
-            left: {
-                middle: {},
-                bottom: {
-                    first: {},
-                    second: {},
-                    third: {}
-                },
-                right: {}
-            }
-        }
-
-        this.target.left.middle = $(`#${parentId.bindarea.left.middle}`);
-        this.target.left.bottom.first = $(`#${parentId.bindarea.left.bottom.first}`);
-        this.target.left.bottom.second = $(`#${parentId.bindarea.left.bottom.second}`);
-        this.target.left.bottom.third = $(`#${parentId.bindarea.left.bottom.third}`);
+        this.target = {}
 
         this.model = {};
 
         this.leftMiddleBind = () => {
-            this.target.left.middle.html($(`#${parentId.temp.left.middle}`).html());
+            $(`#${parentId.bindarea.left.middle}`).html($(`#${this.id.temp.left.middle}`).html());
         };
 
         this.leftBottomBind = () => {
-            this.target.left.bottom.first.html($(`#${parentId.temp.left.bottom.first}`).html());
-            this.target.left.bottom.second.html($(`#${parentId.temp.left.bottom.second}`).html());
-            this.target.left.bottom.third.html($(`#${parentId.temp.left.bottom.third}`).html());
+            $(`#${parentId.bindarea.left.bottom.first}`).html($(`#${this.id.temp.left.bottom.first}`).html());
+            $(`#${parentId.bindarea.left.bottom.second}`).html($(`#${this.id.temp.left.bottom.second}`).html());
+            $(`#${parentId.bindarea.left.bottom.third}`).html($(`#${this.id.temp.left.bottom.third}`).html());
         };
     }
 

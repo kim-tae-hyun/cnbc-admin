@@ -64,8 +64,8 @@ class MainMarket extends Base {
                         </ul>
                         <div class="crmd_btn_paging">
                             <div class="swiper-pagination" id="${this.id.swiper.korStock.page}" style="bottom:0px"></div>
-                            <a href="#" class="crmd_bp_left icn" title="이전 보기" id="${this.id.swiper.korStock.prevEl}" style="z-index: 15"><i class="ir">이전</i></a>
-                            <a href="#" class="crmd_bp_right icn" title="다음 보기" id="${this.id.swiper.korStock.nextEl}" style="z-index: 15"><i class="ir">다음</i></a>
+                            <a href="javasctip:;" class="crmd_bp_left icn" title="이전 보기" id="${this.id.swiper.korStock.prevEl}" style="z-index: 15"><i class="ir">이전</i></a>
+                            <a href="javasctip:;" class="crmd_bp_right icn" title="다음 보기" id="${this.id.swiper.korStock.nextEl}" style="z-index: 15"><i class="ir">다음</i></a>
                         </div>
                     </div>
                 `;
@@ -101,8 +101,8 @@ class MainMarket extends Base {
                         </ul>
                         <div class="crmd_btn_paging">
                             <div class="swiper-pagination" id="${this.id.swiper.forStock.page}" style="bottom:0px"></div>
-                            <a href="#" class="crmd_bp_left icn" title="이전 보기" id="${this.id.swiper.forStock.prevEl}" style="z-index: 15"><i class="ir">이전</i></a>
-                            <a href="#" class="crmd_bp_right icn" title="다음 보기" id="${this.id.swiper.forStock.nextEl}" style="z-index: 15"><i class="ir">다음</i></a>
+                            <a href="javascript:;" class="crmd_bp_left icn" title="이전 보기" id="${this.id.swiper.forStock.prevEl}" style="z-index: 15"><i class="ir">이전</i></a>
+                            <a href="javascript:;" class="crmd_bp_right icn" title="다음 보기" id="${this.id.swiper.forStock.nextEl}" style="z-index: 15"><i class="ir">다음</i></a>
                         </div>
                     </div>
                 `;
@@ -138,8 +138,8 @@ class MainMarket extends Base {
                         </ul>
                         <div class="crmd_btn_paging">
                             <div class="swiper-pagination" id="${this.id.swiper.exchange.page}" style="bottom:0px"></div>
-                            <a href="#" class="crmd_bp_left icn" title="이전 보기" id="${this.id.swiper.exchange.prevEl}" style="z-index: 15"><i class="ir">이전</i></a>
-                            <a href="#" class="crmd_bp_right icn" title="다음 보기" id="${this.id.swiper.exchange.nextEl}" style="z-index: 15"><i class="ir">다음</i></a>
+                            <a href="javasctip:;" class="crmd_bp_left icn" title="이전 보기" id="${this.id.swiper.exchange.prevEl}" style="z-index: 15"><i class="ir">이전</i></a>
+                            <a href="javasctip:;" class="crmd_bp_right icn" title="다음 보기" id="${this.id.swiper.exchange.nextEl}" style="z-index: 15"><i class="ir">다음</i></a>
                         </div>
                     </div>
                 `;
@@ -150,13 +150,13 @@ class MainMarket extends Base {
 
             this.target.html(`<h2 class="hide">실시간 시황 데이터</h2>
                 <ul class="crmd_list" id="${this.id.swiper.self}"><!-- 활성화시 current -->
-                    <li class="crmd_cont_domestic current" id="${this.id.swiper.tab}-korStock"><a href="#" class="crmd_title">국내증시</a>
+                    <li class="crmd_cont_domestic current" id="${this.id.swiper.tab}-korStock"><a href="javasctip:;" class="crmd_title" onClick="return false;">국내증시</a>
                         ${getKorStockContainerTemplate()}
                     </li>
-                    <li class="crmd_cont_overseas" id="${this.id.swiper.tab}-forStock"><a href="#" class="crmd_title">해외증시</a>
+                    <li class="crmd_cont_overseas" id="${this.id.swiper.tab}-forStock"><a href="javasctip:;" class="crmd_title" onClick="return false;">해외증시</a>
                         ${getForStockContainerTemplate()}
                     </li>
-                    <li class="crmd_cont_exchange" id="${this.id.swiper.tab}-exchange"><a href="#" class="crmd_title">환율</a>
+                    <li class="crmd_cont_exchange" id="${this.id.swiper.tab}-exchange"><a href="javasctip:;" class="crmd_title" onClick="return false;">환율</a>
                         ${getExchangeContainerTemplate()}
                     </li>
                 </ul>`);
