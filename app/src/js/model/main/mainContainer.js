@@ -159,6 +159,10 @@ class MainContainer extends Base {
             this.model.financial.initialize();
             this.model.financial.render();
 
+            this.model.hotIssue = new MainHotIssue(this.id.content.right.hotIssue);
+            this.model.hotIssue.initialize();
+            this.model.hotIssue.render();
+
             super.render();
         };
 

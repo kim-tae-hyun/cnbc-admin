@@ -52,6 +52,7 @@ class MainAD extends Base {
          * leftMiddleBind
          */
         this.leftMiddleBind = () => {
+            $(`#${this.id.temp.left.middle}`).find("script").remove();
             $(`#${parentId.left.middle}`).html($(`#${this.id.temp.left.middle}`).html());
         };
 
@@ -59,6 +60,10 @@ class MainAD extends Base {
          * leftBottomBind
          */
         this.leftBottomBind = () => {
+            $(`#${this.id.temp.left.bottom.first}`).find("script").remove();
+            $(`#${this.id.temp.left.bottom.second}`).find("script").remove();
+            $(`#${this.id.temp.left.bottom.third}`).find("script").remove();
+
             let getLeftBottomTemplate = () => {
                 let leftBottomTemplate = `
                     <li class="clb_ad_list">${$(`#${this.id.temp.left.bottom.first}`).html()}</li>
@@ -76,6 +81,11 @@ class MainAD extends Base {
          * rightTopBind
          */
         this.rightTopBind = () => {
+            $(`#${this.id.temp.right.top.first}`).find("script").remove();
+            $(`#${this.id.temp.right.top.second}`).find("script").remove();
+            $(`#${this.id.temp.right.top.third}`).find("script").remove();
+            $(`#${this.id.temp.right.top.fourth}`).find("script").remove();
+
             let getRightTopTemplate = () => {
                 let rightTopTemplate = `<div class="swiper-container" id="${this.id.ad.right.top.swiper.container}">
                     <h2 class="hide">프로모션 배너</h2>
@@ -120,6 +130,9 @@ class MainAD extends Base {
          * leftBottomBind
          */
         this.rightMiddleBind = () => {
+            $(`#${this.id.temp.right.middle.first}`).find("script").remove();
+            $(`#${this.id.temp.right.middle.second}`).find("script").remove();
+
             $(`#${parentId.right.middle.top}`).html($(`#${this.id.temp.right.middle.first}`).html());
             $(`#${parentId.right.middle.bottom}`).html($(`#${this.id.temp.right.middle.second}`).html());
         };
@@ -128,6 +141,9 @@ class MainAD extends Base {
          * rightBottomBind
          */
         this.rightBottomBind = () => {
+            $(`#${this.id.temp.right.bottom.first}`).find("script").remove();
+            $(`#${this.id.temp.right.bottom.second}`).find("script").remove();
+
             let getRightBottomTemplate = () => {
                 let rightTopTemplate = `  <div class="cr_ad_bnr">
                     ${$(`#${this.id.temp.right.bottom.first}`).html()}

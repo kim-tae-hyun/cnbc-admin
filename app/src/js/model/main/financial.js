@@ -5,7 +5,7 @@ class MainFinancial extends Base {
         this.target = $(`#${parentId}`);
 
         this.id = {
-            self: 'cnbc-admin-main-substance-self'
+            self: 'cnbc-admin-main-financial-self'
         };
 
         this.model = {};
