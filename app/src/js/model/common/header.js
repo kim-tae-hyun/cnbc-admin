@@ -82,7 +82,7 @@ class Header extends Base {
                             <h2 class="hide">SBSCNBC 공통메뉴</h2>
                             <ul class="gnb">
                                 <li class="gnb_cont"><a href="${loginUrl}" class="gnb_link">${loginText}</a></li>
-                                <li class="gnb_cont_onair"><i class="round_blue_left icn"></i><a href="javascript:;" class="gnb_link" onclick="return false;" id="${this.id.onair}">ON AIR</a><i class="round_blue_right icn"></i></li>
+                                <li class="gnb_cont_onair"><i class="round_blue_left icn"></i><a href="http://play.sbs.co.kr/onair/pc/index.html?channel=sbscnbc" target="_blank" class="gnb_link" >ON AIR</a><i class="round_blue_right icn"></i></li>
                                 <li class="gnb_cont"><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}/sub/channel.jsp" class="gnb_link">채널번호</a></li>
                                 <li class="gnb_cont"><a href="http://w3.sbs.co.kr/schedule/scheduleSub.do?depth02=d2_2&depth03=CNBC&channel=CNBC" target="_blank" class="gnb_link">편성표</a></li>
                                 <li class="gnb_cont"><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}/sub/qna_new.jsp" class="gnb_link">시청자게시판</a></li>
@@ -161,14 +161,6 @@ class Header extends Base {
                     return false;
                 }
             });
-
-            // 온에어 클릭시
-            this.target.on('click', `#${this.id.onair}`, (event) => {
-                let popWidth = 910;
-                let onairWin = window.open('http://vod.sbs.co.kr/onair/onair_index.jsp?Channel=CNBC','SBS_OnAir','directories=no,location=no,menubar=no,status=no,toolbar=no,scrollbars=no,resizable=no,width='+popWidth+',height=490');
-                onairWin.focus();
-            });
-
         };
     }
 
