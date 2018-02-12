@@ -75,7 +75,6 @@ class MainAD extends Base {
         /**
          * rightTopBind
          */
-
         this.rightTopBind = () => {
             let getRightTopTemplate = () => {
                 let rightTopTemplate = `<div class="swiper-container" id="${this.id.ad.right.top.swiper.container}">
@@ -116,10 +115,34 @@ class MainAD extends Base {
             }).on('slideChange', function () {
             });
         };
+
+        /**
+         * leftBottomBind
+         */
+        this.rightMiddleBind = () => {
+            $(`#${parentId.right.middle.top}`).html($(`#${this.id.temp.right.middle.first}`).html());
+            $(`#${parentId.right.middle.bottom}`).html($(`#${this.id.temp.right.middle.second}`).html());
+        };
+
+        /**
+         * rightBottomBind
+         */
+        this.rightBottomBind = () => {
+            let getRightBottomTemplate = () => {
+                let rightTopTemplate = `  <div class="cr_ad_bnr">
+                    ${$(`#${this.id.temp.right.bottom.first}`).html()}
+                </div>
+                <div class="cr_ad_bnr">
+                    ${$(`#${this.id.temp.right.bottom.second}`).html()}
+                </div>`;
+
+                return rightTopTemplate;
+            }
+            $(`#${parentId.right.bottom}`).html(getRightBottomTemplate());
+        };
     }
 
     initialize() {
-
         super.initialize();
     }
 
@@ -127,6 +150,9 @@ class MainAD extends Base {
         this.leftMiddleBind();
         this.leftBottomBind();
         this.rightTopBind();
+        this.rightMiddleBind();
+        this.rightBottomBind();
+
         super.render();
     }
 }

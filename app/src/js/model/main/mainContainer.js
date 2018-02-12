@@ -30,7 +30,10 @@ class MainContainer extends Base {
                 },
                 right : {
                     top : 'cnbc-admin-main-ad-right-top',
-                    middle : 'cnbc-admin-main-ad-right-middle',
+                    middle : {
+                        top : 'cnbc-admin-main-ad-right-middle-top',
+                        middle : 'cnbc-admin-main-ad-right-middle-bottom'
+                    },
                     bottom : 'cnbc-admin-main-ad-right-bottom'
                 }
             },
@@ -83,10 +86,17 @@ class MainContainer extends Base {
                             <div class="cr_promotion_bnr">
                                 <div id="${this.id.ad.right.top}"></div>
                             </div>
-                            <div class="cr_financial"></div>
-                            <div class="cr_ad_bnr"></div>
+                            <div class="cr_financial">
+                                <div id="${this.id.ad.right.middle.top}"></div>
+                            </div>
+                            <div class="cr_financial">
+                            </div>
+                            <div class="cr_ad_bnr">
+                                <div id="${this.id.ad.right.middle.bottom}"></div>
+                            </div>
                             <div class="cr_hot_issue"></div>
                             <div class="cr_contact_cnbc"></div>
+                            <div id="${this.id.ad.right.bottom}" ></div>
                         </div>
                         <i class="cont_right_border"></i>
                     </div>
