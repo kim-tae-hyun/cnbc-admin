@@ -19,7 +19,7 @@ class MainPopular extends Base {
                     if( articleIndex == 5 * ( n - 1 )) {
                         popularListTemplate += `<ul class="clmn_list">`;
                     }
-                    popularListTemplate += `<li class="clmn_cont"><a href="http://sbscnbc.sbs.co.kr/read.jsp?pmArticleId=${article.articleId}" class="clmn_link">${article.title}</a></li>`;
+                    popularListTemplate += `<li class="clmn_cont"><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}/read.jsp?pmArticleId=${article.articleId}" class="clmn_link">${article.title}</a></li>`;
 
                     if( articleIndex == 5 * n - 1 ) {
                         popularListTemplate += `</ul>`;

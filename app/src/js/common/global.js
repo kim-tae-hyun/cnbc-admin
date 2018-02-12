@@ -1,7 +1,14 @@
 const CNBC_ADMIN_GLOBAL = {
     CONFIG : {
         URL : {
+            SBS : 'http://www.sbs.co.kr',
+            PLUS : 'http://sbsmedianet.sbs.co.kr/plus',
+            SPORTS : 'http://sbssports.sbs.co.kr',
+            GOLF : 'http://golf.sbs.co.kr',
             CNBC : 'http://sbscnbc.sbs.co.kr',
+            FUNE : 'http://sbsmedianet.sbs.co.kr/fune',
+            MTV : 'http://sbsmedianet.sbs.co.kr/mtv',
+            NICK : 'http://sbsmedianet.sbs.co.kr/nick',
             AUTH : {
                 LOGIN : {
                     text : '로그인',
