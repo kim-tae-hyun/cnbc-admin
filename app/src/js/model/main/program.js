@@ -92,7 +92,7 @@ class MainProgram extends Base {
                     bulletActiveClass: 'on',
                     clickable: true,
                     renderBullet: function (index, className) {
-                        return `<a href="#" class="${className}"><span class="icn"><i class="ir">첫번째 컨텐츠</i></span></a>`;
+                        return `<a href="#" class="${className}"><span class="icn"><i class="ir">${index + 1}번째 컨텐츠</i></span></a>`;
                     }
                 },
                 slidesPerView: 1,

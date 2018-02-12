@@ -24,19 +24,14 @@ class MainContainer extends Base {
                 }
             },
             ad :{
-                bindarea : {
-                    left : {
-                        middle : 'cnbc-admin-main-ad-bindarea-left-middle',
-                        bottom : {
-                            first : 'cnbc-admin-main-ad-bindarea-left-bottom-first',
-                            second : 'cnbc-admin-main-ad-bindarea-left-bottom-second',
-                            third : 'cnbc-admin-main-ad-bindarea-left-bottom-third'
-                        }
-                    },
-                    right : {
-                        middle : 'cnbc-admin-main-ad-bindarea-right-middle',
-                        bottom : 'cnbc-admin-main-ad-bindarea-right-bottom'
-                    }
+                left : {
+                    middle : 'cnbc-admin-main-ad-left-middle',
+                    bottom : 'cnbc-admin-main-ad-left-bottom'
+                },
+                right : {
+                    top : 'cnbc-admin-main-ad-right-top',
+                    middle : 'cnbc-admin-main-ad-right-middle',
+                    bottom : 'cnbc-admin-main-ad-right-bottom'
                 }
             },
         };
@@ -69,7 +64,7 @@ class MainContainer extends Base {
                                 <div id="${this.id.content.left.ceo}"></div>    
                             </div>
                             <div class="top_news_bn">
-                                <div id="${this.id.ad.bindarea.left.middle}"></div>
+                                <div id="${this.id.ad.left.middle}"></div>
                             </div>
                             <div class="cl_bottom_cont">
                                 <div id="${this.id.content.left.program}"></div>
@@ -78,9 +73,7 @@ class MainContainer extends Base {
                                 <div id="${this.id.content.left.premium}"></div>
                             </div>
                            <ul class="cl_bottom_ad">
-                                <li class="clb_ad_list" id="${this.id.ad.bindarea.left.bottom.first}"></li>
-                                <li class="clb_ad_list" id="${this.id.ad.bindarea.left.bottom.second}"></li>
-                                <li class="clb_ad_list" id="${this.id.ad.bindarea.left.bottom.third}"></li>
+                                <div id="${this.id.ad.left.bottom}"></div>
                             </ul>
                         </div>
                         <div class="cont_right">
@@ -88,7 +81,7 @@ class MainContainer extends Base {
                                 <div id="${this.id.content.right.market}"></div>
                             </div>
                             <div class="cr_promotion_bnr">
-                                <li class="clb_ad_list" id="${this.id.ad.bindarea.right.middle}"></li>
+                                <div id="${this.id.ad.right.top}"></div>
                             </div>
                             <div class="cr_financial"></div>
                             <div class="cr_ad_bnr"></div>
