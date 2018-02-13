@@ -23,7 +23,7 @@ class MainCEO extends Base {
 
             this.target.html(`<div id="${this.id.self}">
                 <div class="cltc_ceo_news">
-                    <h2 class="clceo_tagname"><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}/read.jsp?pmArticleId=${this.view.ceo.articleId}" class="clceo_tagname_link">취재파일</a></h2>
+                    <h2 class="clceo_tagname"><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}/read.jsp?pmArticleId=${this.view.ceo.articleId}" class="clceo_tagname_link">${this.view.ceo.name}</a></h2>
                     <div class="clceo_top_w">
                         <a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}/read.jsp?pmArticleId=${this.view.ceo.articleId}" class="clct_cont">
                             <strong class="clct_title">${this.view.ceo.title}</strong>
