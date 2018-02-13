@@ -1,0 +1,113 @@
+{
+  "header" : {},
+  "footer" : {
+    "program": [
+      {
+        "name": "뉴스",
+        "menu": [
+          {
+            "title" : "모닝벨",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "이슈$",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "용감한 토크쇼 작렬",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "백브리핑 시시각각",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "뉴스프리즘",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "비즈투데이",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          }
+        ]
+      },
+      {
+        "name": "재테크",
+        "menu": [
+          {
+            "title" : "투자불변의 법칙 필살기",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "플랜100세",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "부동산 따라잡기",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "부동산 투자자들",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "고민타파 부동산 해결사들",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          }
+        ]
+      },
+      {
+        "name": "CEO",
+        "menu": [
+          {
+            "title" : "취재파일",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "임윤선의 블루베리",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          }
+        ]
+      },
+      {
+        "name": "교양",
+        "menu": [
+          {
+            "title" : "성공의 정석, 꾼",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "KOREA REPORT",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          },
+          {
+            "title" : "닥터Q 내 몸을 말하다",
+            "linkUrl" : "http://sbscnbc.sbs.co.kr/new/prog/prog_sub_list.jsp?pmProgId=10000010039"
+          }
+        ]
+      }
+    ],
+    "notice" : [
+      {
+        "title" : "[에스비에스플러스] '증권인터넷방송서비스' 운영사변경으로 인한 개인정보 및 채무 이관 안내",
+        "linkUrl" : "http://sbscnbc.sbs.co.kr/sub/notice.jsp?no=172"
+      },
+      {
+        "title" : "SBS미디어넷 경력사원 채용공고",
+        "linkUrl" : "http://sbscnbc.sbs.co.kr/sub/notice.jsp?no=170"
+      },
+      {
+        "title" : "2017 SBSCNBC 봄 개편 프로그램 안내",
+        "linkUrl" : "http://sbscnbc.sbs.co.kr/sub/notice.jsp?no=169"
+      },
+      {
+        "title" : "2017 SBSPLUS 경력사원 (CNBC취재기자/재무) 채용",
+        "linkUrl" : "http://sbscnbc.sbs.co.kr/sub/notice.jsp?no=168"
+      },
+      {
+        "title" : "2016 SBS PLUS 경력사원 (제휴사업) 모집",
+        "linkUrl" : "http://sbscnbc.sbs.co.kr/sub/notice.jsp?no=167"
+      }
+    ]
+  }
+}

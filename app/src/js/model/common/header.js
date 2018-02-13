@@ -19,7 +19,7 @@ class Header extends Base {
             let loginText = CNBC_ADMIN_GLOBAL.CONFIG.URL.AUTH.LOGOUT.text;
 
             if(this.state.login === false) {
-                loginUrl = CNBC_ADMIN_GLOBAL.CONFIG.URL.AUTH.LOGIN.link + '?returnUrl=' + encodeURIComponent(CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC);
+                loginUrl = CNBC_ADMIN_GLOBAL.CONFIG.URL.AUTH.LOGIN.link + '?returnUrl=' + encodeURIComponent(location.href);
                 loginText = CNBC_ADMIN_GLOBAL.CONFIG.URL.AUTH.LOGIN.text;
             }
 
