@@ -74,7 +74,7 @@ class MainTop extends Base {
                             </a>
                         </div>
                         <!--2017-03-23 레이어팝업 추가 -->
-                        <div class="contop_bn" style="display:block;" id="${this.id.ad}">
+                        <div class="contop_bn" id="${this.id.ad}">
                             <a href="#" class="cpo_w">
                                   <span class="cpo_text_w">
                                     <strong class="cpo_headtitle"><span class="icn"><i class="ir">SBSCNBC ON AIR</i></span><i class="ht_topbar"></i></strong>
@@ -120,9 +120,8 @@ class MainTop extends Base {
             });
 
             this.target.on('click', `#${this.id.ad}`, (event) => {
-                let popWidth = 910;
-                let onairWin = window.open('http://vod.sbs.co.kr/onair/onair_index.jsp?Channel=CNBC','SBS_OnAir','directories=no,location=no,menubar=no,status=no,toolbar=no,scrollbars=no,resizable=no,width='+popWidth+',height=490');
-                onairWin.focus();
+                window.open(`${CNBC_ADMIN_GLOBAL.CONFIG.URL.PLAY}/onair/pc/index.html?channel=sbscnbc`, "_blank");
+                return false;
             });
 
             let bindSliderText = () => {

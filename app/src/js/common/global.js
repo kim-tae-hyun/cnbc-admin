@@ -9,6 +9,7 @@ const CNBC_ADMIN_GLOBAL = {
             FUNE : 'http://sbsmedianet.sbs.co.kr/fune',
             MTV : 'http://sbsmedianet.sbs.co.kr/mtv',
             NICK : 'http://sbsmedianet.sbs.co.kr/nick',
+            PLAY : 'http://play.sbs.co.kr',
             AUTH : {
                 LOGIN : {
                     text : '로그인',
