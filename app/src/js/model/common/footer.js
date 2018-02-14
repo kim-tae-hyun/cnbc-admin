@@ -9,6 +9,16 @@ class Footer extends Base {
             bindarea : {
                 program : 'cnbc-admin-footer-bindarea-program',
                 notice : 'cnbc-admin-footer-bindarea-notice'
+            },
+            site : {
+                family : {
+                    self: 'cnbc-admin-footer-site-family-self',
+                    toggle : 'cnbc-admin-footer-site-family-toggle'
+                },
+                local : {
+                    self : 'cnbc-admin-footer-site-local-self',
+                    toggle : 'cnbc-admin-footer-site-local-toggle'
+                }
             }
         };
 
@@ -89,9 +99,9 @@ class Footer extends Base {
                                 고객센터 SBS아이앤엠 02-2001-6600 SBSCNBC 방송사 02-6938-1600 <a href="mailto:webmaster@sbs.co.kr" title="메일클라이언트가 실행됩니다" class="fi_addr_link">E-mail</a></address>
                             <p class="copyright">COPYRIGHT &copy; SBS I&M &amp; SBSPLUS. ALL RIGHTS RESERVED.</p>
                             <h3 class="hide">SBSCNBC 관련사이트</h3>
-                            <div class="site_family">
-                                <strong class="site_title"><a href="#" class="site_link">SBS Family<i class="site_tit_btn icn"></i></a></strong><!--활성화시 on-->
-                                <div class="site_list_w"><!--활성화시 on-->
+                            <div class="site_family" id="${this.id.site.family.self}">
+                                <strong class="site_title"><a href="javasctipt:;" onclick="return false;" class="site_link">SBS Family<i class="site_tit_btn icn"></i></a></strong><!--활성화시 on-->
+                                <div class="site_list_w" id="${this.id.site.family.toggle}"><!--활성화시 on-->
                                     <ul class="site_list">
                                         <li class="site_cont"><a href="http://www.sbsmedia.co.kr" class="site_link" target="_blank" alt="SBS 미디어홀딩스">SBS 미디어홀딩스</a></li>
                                         <li class="site_cont"><a href="http://www.sbscontentshub.co.kr" class="site_link" target="_blank" alt="SBS 콘텐츠허브">SBS 콘텐츠허브</a></li>
@@ -110,9 +120,9 @@ class Footer extends Base {
                                     </ul>
                                 </div>
                             </div><!--// site_family -->
-                            <div class="site_local">
-                                <strong class="site_title"><a href="#" class="site_link">지역민영방송<i class="site_tit_btn icn"></i></a></strong><!--활성화시 on -->
-                                <div class="site_list_w"><!--활성화시 on-->
+                            <div class="site_local" id="${this.id.site.local.self}">
+                                <strong class="site_title"><a href="javascript:;" onclick="return false;" class="site_link">지역민영방송<i class="site_tit_btn icn"></i></a></strong><!--활성화시 on -->
+                                <div class="site_list_w" id="${this.id.site.local.toggle}"><!--활성화시 on-->
                                     <ul class="site_list">
                                         <li class="site_cont"><a href="http://www.igtb.co.kr/" class="site_link" target="_blank">강원 민방</a></li>
                                         <li class="site_cont"><a href="http://www.ikbc.co.kr/" class="site_link" target="_blank">광주 방송</a></li>
@@ -140,6 +150,16 @@ class Footer extends Base {
 
             this.target.html(bindTemplate);
             this.target.off();
+
+            this.target.on('click', `#${this.id.site.family.self}`, (event) => {
+                $(`#${this.id.site.family.toggle}`).toggleClass("on");
+                return false;
+            });
+
+            this.target.on('click', `#${this.id.site.local.self}`, (event) => {
+                $(`#${this.id.site.local.toggle}`).toggleClass("on");
+                return false;
+            });
         };
     }
 
