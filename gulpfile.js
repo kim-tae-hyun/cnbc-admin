@@ -16,7 +16,7 @@ var dist = 'app/dist';
 var path = {
     js: src + '/js/**/*.js',
     css: src + '/css/**/*.css',
-    img: src + '/img/**/*.*',
+    img: src + '/images/**/*.*',
     api: src + '/api/**/*.*',
     lib: src + '/lib/**/*.*',
     html: src + '/**/*.html',
@@ -78,7 +78,7 @@ gulp.task('compile-sass', function() {
 });
 
 gulp.task('copy-files', function() {
-    gulp.src(path.img).pipe(gulp.dest(dist + '/img'));
+    gulp.src(path.img).pipe(gulp.dest(dist + '/images'));
     gulp.src(path.api).pipe(gulp.dest(dist + '/api'));
     gulp.src(path.lib).pipe(gulp.dest(dist + '/js'));
     gulp.src(path.css).pipe(gulp.dest(dist + '/css'));
