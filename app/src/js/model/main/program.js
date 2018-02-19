@@ -71,7 +71,9 @@ class MainProgram extends Base {
                 return sliderContainerTemplate;
             }
 
-            this.target.html(`<div id="${this.id.self}">
+            this.target.html(`
+                <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
+                <div id="${this.id.self}">
                     <h2 class="clbc_issue_headtitle"><span class="icn"><i class="ir">주요 프로그램</i></span><i class="ht_topbar"></i></h2>
                     <div class="swiper-container" id="${this.id.swiper.container}">
                         <div class="swiper-wrapper" >

@@ -72,7 +72,7 @@ class MainContainer extends Base {
                             <div class="cl_bottom_cont">
                                 <div id="${this.id.content.left.program}"></div>
                             </div>
-                            <div class="cl_center_cont">
+                            <div class="cl_center_cont" style="position: relative">
                                 <div id="${this.id.content.left.premium}"></div>
                             </div>
                            <ul class="cl_bottom_ad">
