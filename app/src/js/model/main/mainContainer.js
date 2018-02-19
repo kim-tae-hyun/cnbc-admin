@@ -62,7 +62,7 @@ class MainContainer extends Base {
                     </div>
                     <div id="content" class="main_content_w">
                         <div class="cont_left">
-                            <div class="cl_top_cont">
+                            <div class="cl_top_cont" style="position: relative">
                                 <div id="${this.id.content.left.popular}"></div>
                                 <div id="${this.id.content.left.ceo}"></div>    
                             </div>
