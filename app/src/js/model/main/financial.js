@@ -1,3 +1,8 @@
+/**
+ * SBS CNBC 짭짤
+ * @class MainFinancial
+ * @author whfkdakf75@sbs.co.kr
+ */
 class MainFinancial extends Base {
     constructor(parentId) {
         super();

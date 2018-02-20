@@ -1,3 +1,8 @@
+/**
+ * Header
+ * @class Header
+ * @author whfkdakf75@sbs.co.kr
+ */
 class Header extends Base {
     constructor(parentId) {
         super();

@@ -1,3 +1,8 @@
+/**
+ * 환율
+ * @class MainMarket
+ * @author whfkdakf75@sbs.co.kr
+ */
 class MainMarket extends Base {
     constructor(parentId) {
         super();

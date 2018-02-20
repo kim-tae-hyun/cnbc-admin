@@ -1,3 +1,8 @@
+/**
+ * 주요 프로그램
+ * @class MainProgram
+ * @author whfkdakf75@sbs.co.kr
+ */
 class MainProgram extends Base {
     constructor(parentId) {
         super();

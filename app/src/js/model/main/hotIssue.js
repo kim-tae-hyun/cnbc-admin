@@ -1,3 +1,8 @@
+/**
+ * HOT ISSUE
+ * @class MainHotIssue
+ * @author whfkdakf75@sbs.co.kr
+ */
 class MainHotIssue extends Base {
     constructor(parentId) {
         super();

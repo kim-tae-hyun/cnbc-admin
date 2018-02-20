@@ -1,3 +1,8 @@
+/**
+ * 메인 컨테이너 구조 정의
+ * @class MainContainer
+ * @author whfkdakf75@sbs.co.kr
+ */
 class MainContainer extends Base {
     constructor(parentId) {
         super();
@@ -152,6 +157,37 @@ class MainContainer extends Base {
             this.target.html(`
                 ${getBaseTemplate()}
             `);
+
+            this.target.off();
+
+            // top fix click event
+            this.target.on('click', `#${this.id.fix.top}`, (event) => {
+                alert('top');
+            });
+            // popular fix click event
+            this.target.on('click', `#${this.id.fix.popular}`, (event) => {
+                alert('popular');
+            });
+            // ceo fix click event
+            this.target.on('click', `#${this.id.fix.ceo}`, (event) => {
+                alert('ceo');
+            });
+            // program fix click event
+            this.target.on('click', `#${this.id.fix.program}`, (event) => {
+                alert('program');
+            });
+            // premium fix click event
+            this.target.on('click', `#${this.id.fix.premium}`, (event) => {
+                alert('premium');
+            });
+            // financial fix click event
+            this.target.on('click', `#${this.id.fix.financial}`, (event) => {
+                alert('financial');
+            });
+            // hotIssue fix click event
+            this.target.on('click', `#${this.id.fix.hotIssue}`, (event) => {
+                alert('hotIssue');
+            });
         };
     }
 

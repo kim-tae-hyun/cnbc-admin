@@ -1,3 +1,8 @@
+/**
+ * 메인 상단
+ * @class MainTop
+ * @author whfkdakf75@sbs.co.kr
+ */
 class MainTop extends Base {
     constructor(parentId) {
         super();

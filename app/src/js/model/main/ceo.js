@@ -1,3 +1,8 @@
+/**
+ * 취재파일
+ * @class MainCEO
+ * @author whfkdakf75@sbs.co.kr
+ */
 class MainCEO extends Base {
     constructor(parentId) {
         super();

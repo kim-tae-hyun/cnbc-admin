@@ -1,3 +1,8 @@
+/**
+ * Footer
+ * @class Footer
+ * @author whfkdakf75@sbs.co.kr
+ */
 class Footer extends Base {
     constructor(parentId) {
         super();

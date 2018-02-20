@@ -1,3 +1,8 @@
+/**
+ * 인기뉴스
+ * @class MainPopular
+ * @author whfkdakf75@sbs.co.kr
+ */
 class MainPopular extends Base {
     constructor(parentId) {
         super();

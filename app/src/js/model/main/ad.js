@@ -1,3 +1,8 @@
+/**
+ * 광고
+ * @class MainAD
+ * @author whfkdakf75@sbs.co.kr
+ */
 class MainAD extends Base {
     constructor(parentId) {
         super();

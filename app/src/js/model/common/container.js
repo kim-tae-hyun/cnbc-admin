@@ -1,3 +1,8 @@
+/**
+ * 컨테이너 기본 구조
+ * @class Container
+ * @author whfkdakf75@sbs.co.kr
+ */
 class Container extends Base {
   constructor(parentId) {
     super();

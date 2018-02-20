@@ -1,3 +1,8 @@
+/**
+ * 프리미언 투자전략
+ * @class MainPremium
+ * @author whfkdakf75@sbs.co.kr
+ */
 class MainPremium extends Base {
     constructor(parentId) {
         super();
