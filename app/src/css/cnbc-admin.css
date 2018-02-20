@@ -1,9 +1,40 @@
+.cnbc-admin-fix-top {
+    position: absolute;
+    right: 50%;
+    width: 1418px;
+    height: 310px;
+    margin-right: -214px;
+    top: 20px;
+}
+.cnbc-admin-fix-popular {
+    position: relative;
+    left: -50%;
+}
+.cnbc-admin-fix-ceo {
+    position: relative;
+}
+
+.cnbc-admin-fix-program {
+    position: relative;
+}
+
+.cnbc-admin-fix-premium {
+    position: relative;
+}
+
+.cnbc-admin-fix-financial {
+    position: relative;
+}
+
+.cnbc-admin-fix-hotIssue {
+    position: relative;
+}
 .cnbc-admin-fix {
     position:  absolute;
     z-index:  300;
     width: 30px;
     height: 30px;
-    top: 0;
+    top: -20px;
     right:  0;
 }
 

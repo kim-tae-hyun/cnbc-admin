@@ -42,87 +42,116 @@ class MainContainer extends Base {
         this.model = {};
 
         this.bind = () => {
-            this.target.html(`<div id="container">
-                <div id="${this.id.self}">
-                    <div class="cnbc_main_quick">
-                        <h2 class="cmq_tit">SBS FAMILY</h2>
-                        <ul class="cmq_list">
-                            <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.SBS}" target="_top">SBS</a></li>
-                            <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.PLUS}" target="_top">PLUS</a></li>
-                            <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.SPORTS}" target="_top">SPORTS</a></li>
-                            <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.GOLF}" target="_top">GOLF</a></li>
-                            <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}" target="_top">CNBC</a></li>
-                            <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.FUNE}" target="_top">funE</a></li>
-                            <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.MTV}" target="_top">MTV</a></li>
-                            <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.NICK}" target="_top">nick</a></li>
-                        </ul>
-                    </div>
-                    <div class="content_top">
-                        <div id="${this.id.top}"></div>
-                    </div>
-                    <div id="content" class="main_content_w">
-                        <div class="cont_left">
-                            <div class="cl_top_cont">
-                                <div id="${this.id.content.left.popular}"></div>
-                                <div id="${this.id.content.left.ceo}"></div>    
-                            </div>
-                            <div class="top_news_bn">
-                                <div id="${this.id.ad.left.middle}"></div>
-                            </div>
-                            <div class="cl_bottom_cont">
-                                <div id="${this.id.content.left.program}"></div>
-                            </div>
-                            <div class="cl_center_cont">
-                                <div id="${this.id.content.left.premium}"></div>
-                            </div>
-                           <ul class="cl_bottom_ad">
-                                <div id="${this.id.ad.left.bottom}"></div>
+            let getBaseTemplate = ()=> {
+                let baseTemplate = `<div id="container">
+                    <div id="${this.id.self}">
+                        <div class="cnbc_main_quick">
+                            <h2 class="cmq_tit">SBS FAMILY</h2>
+                            <ul class="cmq_list">
+                                <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.SBS}" target="_top">SBS</a></li>
+                                <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.PLUS}" target="_top">PLUS</a></li>
+                                <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.SPORTS}" target="_top">SPORTS</a></li>
+                                <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.GOLF}" target="_top">GOLF</a></li>
+                                <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}" target="_top">CNBC</a></li>
+                                <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.FUNE}" target="_top">funE</a></li>
+                                <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.MTV}" target="_top">MTV</a></li>
+                                <li><a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.NICK}" target="_top">nick</a></li>
                             </ul>
                         </div>
-                        <div class="cont_right">
-                            <div class="cr_market_data">
-                                <div id="${this.id.content.right.market}"></div>
+                        <div class="content_top">
+                            <div class="cnbc-admin-fix-top">
+                                <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
                             </div>
-                            <div class="cr_promotion_bnr">
-                                <div id="${this.id.ad.right.top}"></div>
-                            </div>
-                            <div class="cr_financial">
-                                <div id="${this.id.ad.right.middle.top}"></div>
-                            </div>
-                            <div class="cr_financial">
-                                <div id="${this.id.content.right.financial}"></div>
-                            </div>
-                            <div class="cr_ad_bnr">
-                                <div id="${this.id.ad.right.middle.bottom}"></div>
-                            </div>
-                            <div class="cr_hot_issue">
-                                <div id="${this.id.content.right.hotIssue}"></div>
-                            </div>
-                            <div class="cr_contact_cnbc">
-                                <h2 class="crcc_headtitle"><span class="icn"><i class="ir">SBSCNBC를 만나는 다양한 방법</i></span><i class="ht_topbar"></i></h2>
-                                <ul class="crcc_list">
-                                    <li class="crcc_cont_facebook"><a href="https://www.facebook.com/SBSCNBC" class="crcc_link" target="_blank" title="SBSCNBC 페이스북으로 새창이동">페이스북<i class="icn"></i></a></li>
-                                    <li class="crcc_cont_npost"><a href="http://m.post.naver.com/my.nhn?memberNo=7497529" class="crcc_link" target="_blank" title="SBSCNBC 네이버포스트로 새창이동">네이버포스트<i class="icn"></i></a></li>
-                                    <li class="crcc_cont_mapp"><a href="https://itunes.apple.com/kr/app/sbs-cnbc/id425106890?mt=8" class="crcc_link" target="_blank" title="SBSCNBC 모바일앱 다운 페이지로 새창이동">네이버TV캐스트<i class="icn"></i></a></li>
-                                    <li class="crcc_cont_naver"><a href="http://newsstand.naver.com/374" class="crcc_link" target="_blank" title="네이버 뉴스스탠드 SBSCNBC 페이지로 새창이동">네이버뉴스스텐드<i class="icn"></i></a></li>
+                            <div id="${this.id.top}"></div>
+                        </div>
+                        <div id="content" class="main_content_w">
+                            <div class="cont_left">
+                                <div class="cl_top_cont">
+                                    <div class="cnbc-admin-fix-popular">
+                                        <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
+                                    </div>
+                                    <div id="${this.id.content.left.popular}"></div>
+                                    
+                                    <div class="cnbc-admin-fix-ceo">
+                                        <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
+                                    </div>
+                                    <div id="${this.id.content.left.ceo}"></div>    
+                                </div>
+                                <div class="top_news_bn">
+                                    <div id="${this.id.ad.left.middle}"></div>
+                                </div>
+                                <div class="cl_bottom_cont">
+                                    <div class="cnbc-admin-fix-program">
+                                        <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
+                                    </div>
+                                    <div id="${this.id.content.left.program}"></div>
+                                </div>
+                                <div class="cl_center_cont">
+                                    <div class="cnbc-admin-fix-premium">
+                                        <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
+                                    </div>
+                                    <div id="${this.id.content.left.premium}"></div>
+                                </div>
+                               <ul class="cl_bottom_ad">
+                                    <div id="${this.id.ad.left.bottom}"></div>
                                 </ul>
                             </div>
-                            <div id="${this.id.ad.right.bottom}" ></div>
+                            <div class="cont_right">
+                                <div class="cr_market_data">
+                                    <div id="${this.id.content.right.market}"></div>
+                                </div>
+                                <div class="cr_promotion_bnr">
+                                    <div id="${this.id.ad.right.top}"></div>
+                                </div>
+                                <div class="cr_financial">
+                                    <div id="${this.id.ad.right.middle.top}"></div>
+                                </div>
+                                <div class="cr_financial">
+                                    <div class="cnbc-admin-fix-financial">
+                                        <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
+                                    </div>
+                                    <div id="${this.id.content.right.financial}"></div>
+                                </div>
+                                <div class="cr_ad_bnr">
+                                    <div id="${this.id.ad.right.middle.bottom}"></div>
+                                </div>
+                                <div class="cr_hot_issue">
+                                    <div class="cnbc-admin-fix-hotIssue">
+                                        <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
+                                    </div>
+                                    <div id="${this.id.content.right.hotIssue}"></div>
+                                </div>
+                                <div class="cr_contact_cnbc">
+                                    <h2 class="crcc_headtitle"><span class="icn"><i class="ir">SBSCNBC를 만나는 다양한 방법</i></span><i class="ht_topbar"></i></h2>
+                                    <ul class="crcc_list">
+                                        <li class="crcc_cont_facebook"><a href="https://www.facebook.com/SBSCNBC" class="crcc_link" target="_blank" title="SBSCNBC 페이스북으로 새창이동">페이스북<i class="icn"></i></a></li>
+                                        <li class="crcc_cont_npost"><a href="http://m.post.naver.com/my.nhn?memberNo=7497529" class="crcc_link" target="_blank" title="SBSCNBC 네이버포스트로 새창이동">네이버포스트<i class="icn"></i></a></li>
+                                        <li class="crcc_cont_mapp"><a href="https://itunes.apple.com/kr/app/sbs-cnbc/id425106890?mt=8" class="crcc_link" target="_blank" title="SBSCNBC 모바일앱 다운 페이지로 새창이동">네이버TV캐스트<i class="icn"></i></a></li>
+                                        <li class="crcc_cont_naver"><a href="http://newsstand.naver.com/374" class="crcc_link" target="_blank" title="네이버 뉴스스탠드 SBSCNBC 페이지로 새창이동">네이버뉴스스텐드<i class="icn"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div id="${this.id.ad.right.bottom}" ></div>
+                            </div>
+                            <i class="cont_right_border"></i>
                         </div>
-                        <i class="cont_right_border"></i>
                     </div>
-                </div>
-            </div>`);
+                </div>`;
+
+                return baseTemplate;
+            }
+
+            this.target.html(`
+                ${getBaseTemplate()}
+            `);
         };
     }
 
     initialize() {
+        this.bind();
         super.initialize();
     }
 
     render() {
-        this.bind();
-
         let httpService = new HttpService('/api/cnbc/home/index.json');
         httpService.callback.succeeded = (data) => {
             CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN = data;
