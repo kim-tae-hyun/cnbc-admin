@@ -29,9 +29,7 @@ class MainPopular extends Base {
                 return popularListTemplate;
             }
 
-            this.target.html(`
-            <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png" style="left: 50%">
-            <div id="${this.id.self}">
+            this.target.html(`<div id="${this.id.self}">
                 <div class="cltc_main_news">
                     <h2 class="hide">주요뉴스</h2>
                     ${getPopularListTemplate()}

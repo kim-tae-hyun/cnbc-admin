@@ -61,9 +61,7 @@ class MainPremium extends Base {
                 return bottomPremiumListTemplate;
             }
 
-            this.target.html(`
-                <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
-                <div id="${this.id.self}">
+            this.target.html(`<div id="${this.id.self}">
                     <h2 class="clcc_invest_headtitle"><span class="icn"><i class="ir">프리미엄 투자전략</i></span><i class="ht_topbar"></i></h2>
                     <div class="clci_w">
                         <div class="clci_cont_w">

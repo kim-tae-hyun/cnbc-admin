@@ -14,7 +14,7 @@ class MainFinancial extends Base {
             let getFinancialTemplate = () => {
                 let financialTemplate = ``;
                 if(!_.isUndefined(this.view.financial)) {
-                    financialTemplate = `
+                    financialTemplate += `
                     <h2 class="crfg_headtitle sc_file_title"><span class="icn"><i class="ir">SBSCNBC짭짤영상</i></span><i class="ht_topbar"></i></h2><!-- 2017-03-03 h2태그에 sc_file_title 클래스 추가 -->
                     <a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}/read.jsp?pmArticleId=${this.view.financial.articleId}" class="crfn_cont">
                         <strong class="crfn_title">${this.view.financial.title}</strong>

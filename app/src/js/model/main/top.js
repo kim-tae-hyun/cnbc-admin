@@ -38,7 +38,6 @@ class MainTop extends Base {
                 }
 
                 let sliderContainerTemplate = `<div class="ctl_top_article swiper-container" id="${this.id.swiper.container}">
-                   <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
                    ${getSlide()}
                      <div class="cta_btn_w">
                         <ul class="ctabtn_indicator_w swiper-pagination" id="${this.id.swiper.page}"><!--활성화시 on 추가-->
