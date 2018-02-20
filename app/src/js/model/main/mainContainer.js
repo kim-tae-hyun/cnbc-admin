@@ -37,6 +37,15 @@ class MainContainer extends Base {
                     bottom : 'cnbc-admin-main-ad-right-bottom'
                 }
             },
+            fix : {
+                top : 'cnbc-admin-main-fix-top',
+                popular : 'cnbc-admin-main-fix-popular',
+                ceo : 'cnbc-admin-main-fix-ceo',
+                program : 'cnbc-admin-main-fix-program',
+                premium : 'cnbc-admin-main-fix-premium',
+                financial : 'cnbc-admin-main-fix-financial',
+                hotIssue : 'cnbc-admin-main-fix-hotIssue'
+            }
         };
 
         this.model = {};
@@ -59,7 +68,7 @@ class MainContainer extends Base {
                             </ul>
                         </div>
                         <div class="content_top">
-                            <div class="cnbc-admin-fix-top">
+                            <div class="cnbc-admin-fix-top" id="${this.id.fix.top}">
                                 <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
                             </div>
                             <div id="${this.id.top}"></div>
@@ -67,12 +76,12 @@ class MainContainer extends Base {
                         <div id="content" class="main_content_w">
                             <div class="cont_left">
                                 <div class="cl_top_cont">
-                                    <div class="cnbc-admin-fix-popular">
+                                    <div class="cnbc-admin-fix-popular" id="${this.id.fix.popular}">
                                         <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
                                     </div>
                                     <div id="${this.id.content.left.popular}"></div>
                                     
-                                    <div class="cnbc-admin-fix-ceo">
+                                    <div class="cnbc-admin-fix-ceo" id="${this.id.fix.ceo}">
                                         <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
                                     </div>
                                     <div id="${this.id.content.left.ceo}"></div>    
@@ -81,13 +90,13 @@ class MainContainer extends Base {
                                     <div id="${this.id.ad.left.middle}"></div>
                                 </div>
                                 <div class="cl_bottom_cont">
-                                    <div class="cnbc-admin-fix-program">
+                                    <div class="cnbc-admin-fix-program" id="${this.id.fix.program}">
                                         <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
                                     </div>
                                     <div id="${this.id.content.left.program}"></div>
                                 </div>
                                 <div class="cl_center_cont">
-                                    <div class="cnbc-admin-fix-premium">
+                                    <div class="cnbc-admin-fix-premium" id="${this.id.fix.premium}">
                                         <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
                                     </div>
                                     <div id="${this.id.content.left.premium}"></div>
@@ -107,7 +116,7 @@ class MainContainer extends Base {
                                     <div id="${this.id.ad.right.middle.top}"></div>
                                 </div>
                                 <div class="cr_financial">
-                                    <div class="cnbc-admin-fix-financial">
+                                    <div class="cnbc-admin-fix-financial" id="${this.id.fix.financial}">
                                         <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
                                     </div>
                                     <div id="${this.id.content.right.financial}"></div>
@@ -116,7 +125,7 @@ class MainContainer extends Base {
                                     <div id="${this.id.ad.right.middle.bottom}"></div>
                                 </div>
                                 <div class="cr_hot_issue">
-                                    <div class="cnbc-admin-fix-hotIssue">
+                                    <div class="cnbc-admin-fix-hotIssue" id="${this.id.fix.hotIssue}">
                                         <input type="image" class="cnbc-admin-fix" src="/images/icon-repairs.png">
                                     </div>
                                     <div id="${this.id.content.right.hotIssue}"></div>
