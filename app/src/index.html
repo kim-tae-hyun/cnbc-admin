@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Keywords" content="SBS CNBC, 뉴스, 증권, 경제, 글로벌경제, 산업, 금융, 산업, 부동산, 시사, 세계, 생활, 문화, 연예, 스포츠, 속보, 재테크, CEO, 교양, Biz, 라이브TV ">
+    <meta name="Description" content="SBS CNBC, 투자전략, 전문가 시장분석, 업종 종목 리포트, 취재파일, 핫이슈, 금융설계, 재무상담, 관심정보, SBS CNBC 코너, TV 프로그램 정보 제공">
+
+    <title>SBSCNBC : 의견 있는 경제채널</title>
+    <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="/js/underscore-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/js/classList.min.js"></script>
+    <script type="text/javascript" src="/js/swiper-4.1.0.min.js"></script>
+    <script type="text/javascript" src="/js/cnbc-admin-1.0.0.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/css/cnbc-admin-1.0.0.min.css" />
+    <link type="text/css" rel="stylesheet" href="http://img.sbs.co.kr/sw16/cnbc/pc/css/cnbc_common.css" />
+    <link type="text/css" rel="stylesheet" href="http://img.sbs.co.kr/sw16/cnbc/pc/css/cnbc_main.css" />
+</head>
+<body>
+<div id="app-cnbc-admin"></div>
+<!-- 메인에 보여줄 광고 스크립트 설정-->
+<div id="cnbc-admin-main-ad-self">
+    <!-- left -->
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-left-middle">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_middle_wide"></script>
+    </div>
+
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-left-bottom-first">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_low_wide_1"></script>
+    </div>
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-left-bottom-second">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_low_wide_2"></script>
+    </div>
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-left-bottom-third">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_low_wide_3"></script>
+    </div>
+
+    <!-- right -->
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-right-top-first">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_top_right1"></script>
+    </div>
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-right-top-second">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_top_rightmiddle1"></script>
+    </div>
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-right-top-third">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_top_right1_2"></script>
+    </div>
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-right-top-fourth">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_top_rightmiddle1_2"></script>
+    </div>
+
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-right-middle-first">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_top_rightlow"></script>
+    </div>
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-right-middle-second">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_middle_right"></script>
+    </div>
+
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-right-bottom-first">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_web"></script>
+    </div>
+    <div style="display:none;" id="cnbc-admin-main-ad-temp-right-bottom-second">
+        <script type="text/javascript" src="http://ad.smartmediarep.com/NetInsight/js/sbsbanner/sbshomepage/cnbc_web@cnbc_low_right2"></script>
+    </div>
+</div>
+<script type="text/javascript">
+    var container = {};
+    var mainContainer = {};
+
+    $(document).ready(function() {
+        if((typeof Container !== 'undefined')) {
+            container = new Container('app-cnbc-admin');
+            container.callback.rendered = function(mainId) {
+                mainContainer = new MainContainer(mainId);
+                mainContainer.initialize();
+                mainContainer.render();
+            };
+            container.initialize();
+            container.render();
+        }
+        else {
+            //location.href = '/browser.html';
+        }
+    });
+</script>
+</body>
+</html>
