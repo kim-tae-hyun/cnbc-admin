@@ -14,6 +14,7 @@ var src = 'app/src';
 var dist = 'app/dist';
 
 var path = {
+    inspinia : src + '/inspinia/**/*.*',
     js: src + '/js/**/*.js',
     css: src + '/css/**/*.css',
     img: src + '/images/**/*.*',
@@ -78,6 +79,7 @@ gulp.task('compile-sass', function() {
 });
 
 gulp.task('copy-files', function() {
+    gulp.src(path.inspinia).pipe(gulp.dest(dist + '/inspinia'));
     gulp.src(path.img).pipe(gulp.dest(dist + '/images'));
     gulp.src(path.api).pipe(gulp.dest(dist + '/api'));
     gulp.src(path.lib).pipe(gulp.dest(dist + '/js'));
