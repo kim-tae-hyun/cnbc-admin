@@ -65,19 +65,6 @@ class MainTop extends Base {
                      </div>
                      <div class="contop_right">
                         <h2 class="hide">현재 방송중인 프로그램</h2>
-                        <div class="ctr_program_onair">
-                            <a href="#" class="cpo_w">
-                              <span class="cpo_text_w"><!--160503 수정-->
-                                <strong class="cpo_headtitle"><span class="icn"><i class="ir">SBSCNBC ON AIR</i></span><i class="ht_topbar"></i></strong>
-                                <span class="cpo_onair_wrap">
-                                    <span class="cpo_onair"><i class="round_yellow_left icn"></i><span class="cpo_onair_text">ON&#45;AIR</span><i class="round_yellow_right icn"></i></span>
-                                    <em class="cpo_prog_title">경제와이드 백브리핑 시시각각</em>
-                                    <span class="cpo_prog_day">월-금 10:00~12:00</span>
-                                </span>
-                              </span><!--160503 수정-->
-                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/main/main_onair.jpg" alt="경제와이드 백브리핑 시시각각" class="cpo_prog_img" width="280" height="310"><!--alt값에 프로그램명 넣어주세요-->
-                            </a>
-                        </div>
                         <!--2017-03-23 레이어팝업 추가 -->
                         <div class="contop_bn" id="${this.id.ad}">
                             <a href="#" class="cpo_w">
