@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>INSPINIA | Dashboard</title>
+
+    <!-- ****************************************************** css 모음 *****************************************************************-->
+    <link href="/inspinia/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/inspinia/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Toastr style -->
+    <link href="/inspinia/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <!-- Gritter -->
+    <link href="/inspinia/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="/inspinia/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/inspinia/css/animate.css" rel="stylesheet">
+    <link href="/inspinia/css/style.css" rel="stylesheet">
+
+    <!-- ****************************************************** 이관 대상 js 모음 *****************************************************************-->
+    <script type="text/javascript" src="/js/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/js/jquery/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="/js/etc/underscore-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/js/swiper/classList.min.js"></script>
+    <script type="text/javascript" src="/js/swiper/swiper-4.1.0.min.js"></script>
+
+    <script type="text/javascript" src="/js/cnbc-admin-1.0.0.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="active">
+                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">CNBC</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="mainManage.html">메인 노출 관리</a></li>
+                        <li class="active"><a href="categoryManage.html">카테고리 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div id="page-wrapper" class="gray-bg">
+    <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sign-out"></i> zzz
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>CNBC</h2>
+            <ol class="breadcrumb">
+                <li class="active">
+                    <strong>CATEGORY_MANAGER</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-5">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Custom responsive table </h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">Config option 1</a>
+                                </li>
+                                <li><a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-5"></div>
+                            <div class="col-sm-7">
+                                <div class="col-sm-4">
+                                    <select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">제목</option>
+                                        <option value="0">작성자</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                    <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped" style="table-layout: fixed;">
+                                <thead>
+                                <tr>
+                                    <th class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></th>
+                                    <th class="col-sm-7">기사제목</th>
+                                    <th class="col-sm-2">등록일시</th>
+                                    <th class="col-sm-1">기자</th>
+                                    <th class="col-sm-1">상태</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                    <td class="col-sm-2"><small>김태현</small></td>
+                                    <td class="col-sm-1"><small>출고</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                    <td class="col-sm-2"><small>김태현</small></td>
+                                    <td class="col-sm-1"><small>출고</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                    <td class="col-sm-2"><small>김태현</small></td>
+                                    <td class="col-sm-1"><small>출고</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                    <td class="col-sm-2"><small>김태현</small></td>
+                                    <td class="col-sm-1"><small>출고</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                    <td class="col-sm-2"><small>김태현</small></td>
+                                    <td class="col-sm-1"><small>출고</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                    <td class="col-sm-2"><small>김태현</small></td>
+                                    <td class="col-sm-1"><small>출고</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                    <td class="col-sm-2"><small>김태현</small></td>
+                                    <td class="col-sm-1"><small>출고</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                    <td class="col-sm-2"><small>김태현</small></td>
+                                    <td class="col-sm-1"><small>출고</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                    <td class="col-sm-2"><small>김태현</small></td>
+                                    <td class="col-sm-1"><small>출고</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                    <td class="col-sm-2"><small>김태현</small></td>
+                                    <td class="col-sm-1"><small>출고</small></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-center" id="page"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content text-center p-md">
+
+                        <h4 class="m-b-xxs">Basic left side navigation layout </h4><small>(main layout)</small>
+                        <p>Available configure options</p>
+                        <span class="simple_tag">Collapse menu</span>
+                        <span class="simple_tag">Fixed sidebar</span>
+                        <span class="simple_tag">Scroll navbar</span>
+                        <span class="simple_tag">Top fixed navbar</span>
+                        <span class="simple_tag">Boxed layout</span>
+                        <span class="simple_tag">Scroll footer</span>
+                        <span class="simple_tag">Fixed footer</span>
+                        <div class="m-t-md">
+                            <p>Check the Dashboard v.4 with basic layout</p>
+                            <div class="p-lg">
+                                <a href="dashboard_4_1.html"><img class="img-responsive img-shadow" src="img/dashboard4_1.jpg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" >
+        <div class="pull-right">
+            10GB of <strong>250GB</strong> Free.
+        </div>
+        <div>
+            <strong>Copyright</strong> Example Company &copy; 2014-2017
+        </div>
+    </div>
+</div>
+</body>
+<!-- Mainly scripts -->
+<script src="/inspinia/js/jquery-3.1.1.min.js"></script>
+<script src="/inspinia/js/bootstrap.min.js"></script>
+<script src="/inspinia/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="/inspinia/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="/inspinia/js/inspinia.js"></script>
+
+<!-- jQuery UI -->
+<script src="/inspinia/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- iCheck -->
+<script src="/inspinia/js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- page -->
+<script type="text/javascript" src="/js/page/pagination.min.js"></script>
+<script type="text/javascript" src="/js/page/bootpag.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+
+        $('#page').off();
+        $('#page').bootpag({
+            total: 100,
+            page: 1,
+            maxVisible: 10,
+            firstLastUse: true,
+            first: '←',
+            last: '→'
+        }).on('page', function(event, num){
+            alert(num);
+        });
+    });
+</script>
+</html>
