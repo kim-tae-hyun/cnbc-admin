@@ -16,6 +16,7 @@
     <link href="/inspinia/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="/inspinia/css/animate.css" rel="stylesheet">
     <link href="/inspinia/css/style.css" rel="stylesheet">
+    <link href="/inspinia/css/plugins/select2/select2.min.css" rel="stylesheet">
 
     <!-- CNBC -->
     <link type="text/css" rel="stylesheet" href="/css/cnbc-admin-1.0.0.min.css" />
@@ -85,218 +86,527 @@
             <div class="col-lg-2">
                 <div id="jstree"></div>
             </div>
-            <div class="col-lg-5">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>뉴스 리스트 </h5>
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                <i class="fa fa-chevron-up"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="ibox-content">
-                        <div class="row">
-                            <div class="col-sm-5"></div>
-                            <div class="col-sm-7">
-                                <div class="col-sm-4">
-                                    <select class="input-sm form-control input-s-sm inline">
-                                        <option value="0">제목</option>
-                                        <option value="0">작성자</option>
-                                    </select>
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>분류</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
                                 </div>
-                                <div class="input-group">
-                                    <input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
-                                    <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                        <div class="col-sm-10">
+                                            <select class="select2_demo_1 form-control">
+                                                <option></option>
+                                                <option value="1">경제</option>
+                                                <option value="2">경제 > 경제</option>
+                                                <option value="3">경제 > 금융</option>
+                                                <option value="4">경제 > 증권</option>
+                                                <option value="5">경제 > 글로벌</option>
+                                                <option value="5">경제 > 증시/증권 > 시황전망</option>
+                                                <option value="5">경제 > 증시/증권 > 채권선물</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <button type="button" class="btn btn-primary btn-xs">적용</button>
+                                        </div>
+                                    </div>
+                                <div class="row p-xs">
+                                    <div class="table-responsive" style="height: 100px; overflow:auto;">
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>경제 > 경제</small></nobr></td>
+                                                    <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>경제 > 금융</small></nobr></td>
+                                                    <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>경제 > 증권</small></nobr></td>
+                                                    <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>경제 > 글로벌</small></nobr></td>
+                                                    <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>경제 > 산업</small></nobr></td>
+                                                    <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-striped" style="table-layout: fixed;">
-                                <thead>
-                                <tr>
-                                    <th class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></th>
-                                    <th class="col-sm-7">기사제목</th>
-                                    <th class="col-sm-2">등록일시</th>
-                                    <th class="col-sm-1">기자</th>
-                                    <th class="col-sm-1">상태</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <div class="text-center" id="page1"></div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>코너</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <select class="select2_demo_2 form-control">
+                                            <option></option>
+                                            <option value="10000003261">CEO&amp;Leaders</option>
+                                            <option value="10000006360">CNBC Worldwide</option>
+                                            <option value="10000000050">Korea Report</option>
+                                            <option value="10000004860">SBSCNBC 뉴스 스페셜</option>
+                                            <option value="10000012060">SBSCNBC 단독보도</option>
+                                            <option value="10000006661">TOPIC ON CNBC</option>
+                                            <option value="10000002360">건강플러스</option>
+                                            <option value="10000010360">그건 이렇습니다</option>
+                                            <option value="10000010361">뉴스&amp;화제</option>
+                                            <option value="10000011460">닥터 Q 내 몸을 말하다</option>
+                                            <option value="10000011360">돈이 되는 보험 스토리 </option>
+                                            <option value="10000011960">딱풀 경제</option>
+                                            <option value="10000010160">뜨거운 연예가 뉴스</option>
+                                            <option value="10000008360">루머와진실</option>
+                                            <option value="10000002361">마켓&amp;트렌드</option>
+                                            <option value="10000011560">멘토의 유산</option>
+                                            <option value="10000011060">박근혜 대통령 파면 </option>
+                                            <option value="10000010961">보험 상담이 필요해</option>
+                                            <option value="10000008260">부동산 매물정보</option>
+                                            <option value="10000010960">부동산 스토리</option>
+                                            <option value="10000000047">부동산 해결사들</option>
+                                            <option value="10000003860">부자되는 재테크</option>
+                                            <option value="10000010460">생활경제칼럼</option>
+                                            <option value="10000009860">식객남녀</option>
+                                            <option value="10000011760">어퍼컷</option>
+                                            <option value="10000000361">업종·종목리포트</option>
+                                            <option value="10000000027">외환/채권/선물/상품</option>
+                                            <option value="10000010761">용감한 토크쇼 '직설'</option>
+                                            <option value="10000010962">원스톱 재무상담</option>
+                                            <option value="10000007660">인문학강의</option>
+                                            <option value="10000011260">임윤선의 블루베리 </option>
+                                            <option value="10000000019">전문가 시장분석</option>
+                                            <option value="10000010760">제정임의 문답쇼 '힘'</option>
+                                            <option value="10000010260">주식챔피언스리그</option>
+                                            <option value="10000011860">짭짤</option>
+                                            <option value="10000010060">취재파일</option>
+                                            <option value="10000000011">해외시장동향</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="button" class="btn btn-primary btn-xs">적용</button>
+                                    </div>
+                                </div>
+                                <div class="row p-xs">
+                                    <div class="table-responsive" style="height: 100px; overflow:auto;">
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>해외시장동향</small></nobr></td>
+                                                <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>주식챔피언스리그</small></nobr></td>
+                                                <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>임윤선의 블루베리</small></nobr></td>
+                                                <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>원스톱 재무상담</small></nobr></td>
+                                                <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>부동산 해결사들</small></nobr></td>
+                                                <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>분류</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <select class="select2_demo_3 form-control">
+                                            <option></option>
+                                            <option value="10000012839">5STAR</option>
+                                            <option value="10000006139">CEO 리포트(방송종료)</option>
+                                            <option value="10000012240">CEO현장토크 '궁금합니다'</option>
+                                            <option value="10000001439">Ceo&Leaders</option>
+                                            <option value="10000004540">D의 유혹</option>
+                                            <option value="10000006639">EQ쇼 SUM</option>
+                                            <option value="10000000035">Korea Report</option>
+                                            <option value="10000000009">SBS CNBC 생활경제 </option>
+                                            <option value="10000001740">SBS CNBC 스페셜</option>
+                                            <option value="10000011239">SBSCNBC 특별기획</option>
+                                            <option value="10000003939">TODAY ON WALL st.</option>
+                                            <option value="10000007940">The Makers (더메이커스)</option>
+                                            <option value="10000010939">[특별대담] 벼랑 끝 한국경제, 해법은?</option>
+                                            <option value="10000010539">[특별좌담] 한국증시 60년 새로운 도전</option>
+                                            <option value="10000001539">▒CNBC KOREA </option>
+                                            <option value="10000013239">고민타파 부동산 해결사들</option>
+                                            <option value="10000011439">김방희의 블루베리 (방송종료)</option>
+                                            <option value="10000008339">꿈꾸는 경제</option>
+                                            <option value="10000000031">내부용</option>
+                                            <option value="10000001841">뉴스 프리즘</option>
+                                            <option value="10000012039">닥터Q 내 몸을 말하다 </option>
+                                            <option value="10000008639">대한민국 성공경제</option>
+                                            <option value="10000013140">돈이 되는 보험 스토리</option>
+                                            <option value="10000006239">디어헌터 (Design &amp; Art hunter)</option>
+                                            <option value="10000003839">라이브머니</option>
+                                            <option value="10000011939">마켓리그(테스트)</option>
+                                            <option value="10000006939">머니 네버 슬립스</option>
+                                            <option value="10000010039">모닝벨</option>
+                                            <option value="10000010839">미리보기(방송종료)</option>
+                                            <option value="10000005139">민생경제 시시각각</option>
+                                            <option value="10000010041">백브리핑 시시각각</option>
+                                            <option value="10000010739">보험고민타파</option>
+                                            <option value="10000006439">부동산 따라잡기</option>
+                                            <option value="10000013339">부동산 삼국지</option>
+                                            <option value="10000005539">부동산 투자자들</option>
+                                            <option value="10000011639">비즈투데이</option>
+                                            <option value="10000011539">성공의 정석 꾼 </option>
+                                            <option value="10000006739">스톡챔피언 (방송종료)</option>
+                                            <option value="10000010139">스톡챔피언 (방송종료)</option>
+                                            <option value="10000012439">승부사</option>
+                                            <option value="10000007339">식객남녀 잘 먹었습니다</option>
+                                            <option value="10000010339">식객남녀 잘 먹었습니다 SUNDAY</option>
+                                            <option value="10000012939">심리학 인간을 말하다</option>
+                                            <option value="10000011440">아는 만큼 보인다 (방송종료)</option>
+                                            <option value="10000013539">알뜰라이프</option>
+                                            <option value="10000005639">오진석의 뉴스터치</option>
+                                            <option value="10000010639">용감한 토크쇼 직설</option>
+                                            <option value="10000000004">월드 마켓 투데이</option>
+                                            <option value="10000012639">유수진의 취미가 머니</option>
+                                            <option value="10000012339">유행통신</option>
+                                            <option value="10000013439">이기는 전략 촉</option>
+                                            <option value="10000010040">이슈&amp;</option>
+                                            <option value="10000004839">이지애의 비즈인사이드</option>
+                                            <option value="10000007239">이호선의 플랜 100</option>
+                                            <option value="10000006339">인문학 지식향연</option>
+                                            <option value="10000011039">인문학 지식향연 (2016)</option>
+                                            <option value="10000007939">인문학 지식향연 시즌2</option>
+                                            <option value="10000011339">인문학 특강 '인류에게 미래는 있는가?'</option>
+                                            <option value="10000013240">인문학 특강 근하신년</option>
+                                            <option value="10000013139">인문학 특강 송구영신</option>
+                                            <option value="10000007741">인문학 특강 시즌3 'Beautiful life'</option>
+                                            <option value="10000008939">인문학 특강 시즌4 '한국인 우리는 누구인가?' (방송종료)</option>
+                                            <option value="10000005039">인문학, 최고의 공부 'Who Am I?'</option>
+                                            <option value="10000011839">임윤선의 블루베리</option>
+                                            <option value="10000008039">재테크 포럼</option>
+                                            <option value="10000008239">정지영의 HIT</option>
+                                            <option value="10000007139">정지영의 블루베리 (방송종료)</option>
+                                            <option value="10000009439">제8차 재테크포럼</option>
+                                            <option value="10000010439">제정임의 문답쇼 힘</option>
+                                            <option value="10000009840">주식챔피언스리그</option>
+                                            <option value="10000011139">주식투자 성공백서</option>
+                                            <option value="10000006539">착한 의자: 세상을 밝게 만들어 갑니다</option>
+                                            <option value="10000012539">청춘비상, 청년이여 식품산업에 도전하라</option>
+                                            <option value="10000004339">최고의 행복 건강플러스 (방송종료)</option>
+                                            <option value="10000004939">취업 라이브러리</option>
+                                            <option value="10000010239">취재파일</option>
+                                            <option value="10000011739">투자불변의 법칙 필살기</option>
+                                            <option value="10000010042">플랜100세</option>
+                                            <option value="10000013039">한문철의 블랙박스 몇대몇</option>
+                                            <option value="10000012739">현장토크, 궁금합니다</option>
+                                            <option value="10000005939">힐링머니</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="button" class="btn btn-primary btn-xs">적용</button>
+                                    </div>
+                                </div>
+                                <div class="row p-xs">
+                                    <div class="table-responsive" style="height: 100px; overflow:auto;">
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>D의 유혹</small></nobr></td>
+                                                <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>CEO현장토크 '궁금합니다'</small></nobr></td>
+                                                <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>SBSCNBC 뉴스 스페셜</small></nobr></td>
+                                                <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>SBSCNBC 단독보도</small></nobr></td>
+                                                <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-sm-11" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>TOPIC ON CNBC</small></nobr></td>
+                                                <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>링크 뉴스 리스트 </h5>
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                <i class="fa fa-chevron-up"></i>
-                            </a>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>뉴스 리스트 </h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <div class="col-sm-4">
+                                            <select class="input-sm form-control input-s-sm inline">
+                                                <option value="0">제목</option>
+                                                <option value="0">작성자</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                            <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="input-group pull-right m-sm">
+                                            <button type="button" class="btn btn-sm btn-info">링크연결</button> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped" style="table-layout: fixed;">
+                                        <thead>
+                                        <tr>
+                                            <th class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></th>
+                                            <th class="col-sm-7">기사제목</th>
+                                            <th class="col-sm-2">등록일시</th>
+                                            <th class="col-sm-1">기자</th>
+                                            <th class="col-sm-1">상태</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="text-center" id="page1"></div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="ibox-content">
-                        <div class="table-responsive">
-                            <table class="table table-striped" style="table-layout: fixed;">
-                                <thead>
-                                <tr>
-                                    <th class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></th>
-                                    <th class="col-sm-7">기사제목</th>
-                                    <th class="col-sm-2">등록일시</th>
-                                    <th class="col-sm-1">기자</th>
-                                    <th class="col-sm-1">상태</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                <tr>
-                                    <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
-                                    <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
-                                    <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
-                                    <td class="col-sm-2"><small>김태현</small></td>
-                                    <td class="col-sm-1"><small>출고</small></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <div class="text-center" id="page2"></div>
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>수동 설정된 뉴스</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="input-group pull-right m-sm">
+                                        <button type="button" class="btn btn-sm btn-info">링크해제</button> </span>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped" style="table-layout: fixed;">
+                                        <thead>
+                                        <tr>
+                                            <th class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></th>
+                                            <th class="col-sm-7">기사제목</th>
+                                            <th class="col-sm-2">등록일시</th>
+                                            <th class="col-sm-1">기자</th>
+                                            <th class="col-sm-1">상태</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-sm-1"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                            <td class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>[JPR컴퍼니] 제이알트레이드, 다양한 신사업 전개로 중고폰 시장 트렌드 이끈다</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><small>출고</small></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="text-center" id="page2"></div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -304,9 +614,6 @@
         </div>
     </div>
     <div class="footer" >
-        <div class="pull-right">
-            10GB of <strong>250GB</strong> Free.
-        </div>
         <div>
             <strong>Copyright</strong> Example Company &copy; 2014-2017
         </div>
@@ -328,12 +635,16 @@
 <!-- iCheck -->
 <script src="/inspinia/js/plugins/iCheck/icheck.min.js"></script>
 
+<!-- Select2 -->
+<script src="/inspinia/js/plugins/select2/select2.full.min.js"></script>
+
 <!-- page -->
 <script type="text/javascript" src="/js/page/pagination.min.js"></script>
 <script type="text/javascript" src="/js/page/bootpag.min.js"></script>
 
 <!-- jstree -->
 <script type="text/javascript" src="/js/jstree/jstree-3.3.5.min.js"></script>
+
 <script>
     $(document).ready(function(){
         $('.i-checks').iCheck({
@@ -366,13 +677,23 @@
         });
 
         $('#jstree').jstree({ 'core' : {
-                'data' : [
-                    { "id" : "ajson1", "parent" : "#", "text" : "FUNE" },
-                    { "id" : "ajson2", "parent" : "#", "text" : "CNBC" },
-                    { "id" : "ajson3", "parent" : "ajson2", "text" : "카테고리 1" },
-                    { "id" : "ajson4", "parent" : "ajson2", "text" : "카테고리 2" },
-                ]
-            } });
+            'data' : [
+                { "id" : "ajson1", "parent" : "#", "text" : "FUNE" },
+                { "id" : "ajson2", "parent" : "#", "text" : "CNBC" },
+                { "id" : "ajson3", "parent" : "ajson2", "text" : "카테고리 1" },
+                { "id" : "ajson4", "parent" : "ajson2", "text" : "카테고리 2" },
+            ]
+        } });
+
+        $(".select2_demo_1").select2({
+            placeholder: "분류를 선택하세요."
+        });
+        $(".select2_demo_2").select2({
+            placeholder: "코너를 선택하세요."
+        });
+        $(".select2_demo_3").select2({
+            placeholder: "프로그램을 선택하세요."
+        });
     });
 </script>
 </html>
