@@ -16,6 +16,8 @@
     <link href="/inspinia/css/animate.css" rel="stylesheet">
     <link href="/inspinia/css/style.css" rel="stylesheet">
     <link href="/inspinia/css/plugins/iCheck/custom.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/css/cnbc-admin-1.0.0.min.css" />
     <!-- ****************************************************** 이관 대상 js 모음 *****************************************************************-->
     <script type="text/javascript" src="/js/jquery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/js/jquery/jquery-ui-1.12.1.min.js"></script>
@@ -30,7 +32,7 @@
         <div class="sidebar-collapse">
             <ul class="nav metismenu" id="side-menu">
                 <li class="active">
-                    <a href="../../index.html"><i class="fa fa-th-large"></i> <span class="nav-label">CNBC</span> <span class="fa arrow"></span></a>
+                    <a href="pc/index.html"><i class="fa fa-th-large"></i> <span class="nav-label">CNBC</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li class="active"><a href="mainManage.html">메인 노출 관리</a></li>
                         <li><a href="../categoryManage/categoryManage.html">카테고리 관리</a></li>
@@ -69,13 +71,24 @@
             </ol>
         </div>
         <div class="col-lg-2">
-
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
-        <div class="row">
-            <iframe src="/index.html" frameborder="0" marginwidth="0" marginheight="0" style="width:100%;height:800px"></iframe>
+        <!-- main content -->
+        <div id="app-cnbc-admin-mainManage">
+            <!-- remote ajax call-->
+            <div class="modal modal-center fade" id="cnbc-admin-main-container-fix-top-modal" tabindex='-1'>
+                <div class="modal-dialog modal-center modal-fullsize">
+                    <div class="modal-content ">
+                        <!-- remote ajax call이 되는영역 -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <iframe src="/view/mainManage/pc/index.html" frameborder="0" marginwidth="0" marginheight="0" style="width:100%;height:800px"></iframe>
+            </div>
         </div>
+        <!-- main content -->
     </div>
     <div class="footer" >
         <div class="pull-right">
@@ -98,4 +111,21 @@
 
 <!-- jQuery UI -->
 <script src="/inspinia/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var cnbcMainManageContainer = new MainManageContainer('app-cnbc-admin-mainManage');
+        //cnbcMainManageContainer.initialize();
+        //cnbcMainManageContainer.render();
+
+        $( "#button1" ).on( "click", function() {
+            let remoteUrl = `/view/mainManage/fix/top.html?_=${new Date().getTime()}`;
+            $(`#cnbc-admin-main-container-fix-top-modal`).removeData('bs.modal');
+            $(`#cnbc-admin-main-container-fix-top-modal`).modal({
+                remote : remoteUrl,
+                backdrop: false
+            });
+        });
+    });
+</script>
 </html>

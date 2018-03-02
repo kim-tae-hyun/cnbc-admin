@@ -2,9 +2,10 @@
  * 메인 컨테이너 구조 정의
  * @class MainContainer
  * @author whfkdakf75@sbs.co.kr
+ * @aIframe : iframe 사용시 fix parent id 정의
  */
 class MainContainer extends Base {
-    constructor(parentId) {
+    constructor(parentId, iframe) {
         super();
 
         this.target = $(`#${parentId}`);
@@ -50,7 +51,8 @@ class MainContainer extends Base {
                 premium : 'cnbc-admin-main-fix-premium',
                 financial : 'cnbc-admin-main-fix-financial',
                 hotIssue : 'cnbc-admin-main-fix-hotIssue'
-            }
+            },
+            iframe : $(`#${iframe}`)
         };
 
         this.model = {};
@@ -162,6 +164,7 @@ class MainContainer extends Base {
 
             // top fix click event
             this.target.on('click', `#${this.id.fix.top}`, (event) => {
+                parent.$('#button1').trigger('click');
                 alert('top');
             });
             // popular fix click event
