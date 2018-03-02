@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" Content="no-cache" />
+    <meta http-equiv="Pragma" Content="no-cache" />
+    <meta http-equiv="Expires" Content="0" />
     <title>INSPINIA | Dashboard</title>
 
     <!-- ****************************************************** css 모음 *****************************************************************-->
@@ -13,11 +16,14 @@
     <link href="/inspinia/css/plugins/toastr/toastr.min.css" rel="stylesheet">
     <!-- Gritter -->
     <link href="/inspinia/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="/inspinia/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="/inspinia/css/animate.css" rel="stylesheet">
     <link href="/inspinia/css/style.css" rel="stylesheet">
-    <link href="/inspinia/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/inspinia/css/plugins/select2/select2.min.css" rel="stylesheet">
 
+    <!-- CNBC -->
     <link type="text/css" rel="stylesheet" href="/css/cnbc-admin-1.0.0.min.css" />
+
     <!-- ****************************************************** 이관 대상 js 모음 *****************************************************************-->
     <script type="text/javascript" src="/js/jquery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/js/jquery/jquery-ui-1.12.1.min.js"></script>
@@ -103,20 +109,21 @@
 <!-- jQuery UI -->
 <script src="/inspinia/js/plugins/jquery-ui/jquery-ui.min.js"></script>
 
+<!-- iCheck -->
+<script src="/inspinia/js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- Select2 -->
+<script src="/inspinia/js/plugins/select2/select2.full.min.js"></script>
+
+<!-- page -->
+<script type="text/javascript" src="/js/page/pagination.min.js"></script>
+<script type="text/javascript" src="/js/page/bootpag.min.js"></script>
+
 <script type="text/javascript">
     $(document).ready(function() {
         var cnbcMainManageContainer = new MainManageContainer('app-cnbc-admin-mainManage');
         cnbcMainManageContainer.initialize();
         cnbcMainManageContainer.render();
-
-        $( "#button1" ).on( "click", function() {
-            let remoteUrl = `/view/mainManage/fix/top.html?_=${new Date().getTime()}`;
-            $(`#cnbc-admin-main-container-fix-top-modal`).removeData('bs.modal');
-            $(`#cnbc-admin-main-container-fix-top-modal`).modal({
-                remote : remoteUrl,
-                backdrop: false
-            });
-        });
     });
 </script>
 </html>
