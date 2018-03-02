@@ -74,21 +74,9 @@
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
-        <!-- main content -->
-        <div id="app-cnbc-admin-mainManage">
-            <!-- remote ajax call-->
-            <div class="modal modal-center fade" id="cnbc-admin-main-container-fix-top-modal" tabindex='-1'>
-                <div class="modal-dialog modal-center modal-fullsize">
-                    <div class="modal-content ">
-                        <!-- remote ajax call이 되는영역 -->
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <iframe src="/view/mainManage/pc/index.html" frameborder="0" marginwidth="0" marginheight="0" style="width:100%;height:800px"></iframe>
-            </div>
+        <div class="row">
+            <iframe src="/view/mainManage/pc/index.html" frameborder="0" marginwidth="0" marginheight="0" style="width:100%;height:800px"></iframe>
         </div>
-        <!-- main content -->
     </div>
     <div class="footer" >
         <div class="pull-right">
@@ -97,6 +85,9 @@
         <div>
             <strong>Copyright</strong> Example Company &copy; 2014-2017
         </div>
+    </div>
+    <!-- main content -->
+    <div id="app-cnbc-admin-mainManage">
     </div>
 </div>
 </body>
@@ -115,8 +106,8 @@
 <script type="text/javascript">
     $(document).ready(function() {
         var cnbcMainManageContainer = new MainManageContainer('app-cnbc-admin-mainManage');
-        //cnbcMainManageContainer.initialize();
-        //cnbcMainManageContainer.render();
+        cnbcMainManageContainer.initialize();
+        cnbcMainManageContainer.render();
 
         $( "#button1" ).on( "click", function() {
             let remoteUrl = `/view/mainManage/fix/top.html?_=${new Date().getTime()}`;

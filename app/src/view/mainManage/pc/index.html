@@ -73,7 +73,10 @@
         if((typeof Container !== 'undefined')) {
             container = new Container('app-cnbc-admin');
             container.callback.rendered = function(mainId) {
-                mainContainer = new MainContainer(mainId);
+                var iframe = {
+                    top : 'cnbc-admin-main-container-fix-top-button'
+                }
+                mainContainer = new MainContainer(mainId, iframe);
                 mainContainer.initialize();
                 mainContainer.render();
             };

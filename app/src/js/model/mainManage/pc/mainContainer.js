@@ -50,9 +50,9 @@ class MainContainer extends Base {
                 program : 'cnbc-admin-main-fix-program',
                 premium : 'cnbc-admin-main-fix-premium',
                 financial : 'cnbc-admin-main-fix-financial',
-                hotIssue : 'cnbc-admin-main-fix-hotIssue'
-            },
-            iframe : $(`#${iframe}`)
+                hotIssue : 'cnbc-admin-main-fix-hotIssue',
+                iframe : iframe
+            }
         };
 
         this.model = {};
@@ -164,8 +164,7 @@ class MainContainer extends Base {
 
             // top fix click event
             this.target.on('click', `#${this.id.fix.top}`, (event) => {
-                parent.$('#button1').trigger('click');
-                alert('top');
+                parent.$(`#${this.id.fix.iframe.top}`).trigger('click');
             });
             // popular fix click event
             this.target.on('click', `#${this.id.fix.popular}`, (event) => {
