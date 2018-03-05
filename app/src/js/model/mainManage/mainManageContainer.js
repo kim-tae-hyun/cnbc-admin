@@ -92,6 +92,15 @@ class MainManageContainer extends Base {
     }
 
     render() {
-        super.render();
+        let httpService = new HttpService('/api/cnbc/home/index.json');
+        httpService.callback.succeeded = (data) => {
+            CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN = data;
+            super.render();
+        }
+
+        httpService.callback.failed = (error) => {
+            alert(`정보를 불러오는데 실패하였습니다.(${error})`);
+        };
+        httpService.getData();
     }
 }

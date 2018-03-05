@@ -199,10 +199,7 @@ class MainContainer extends Base {
     }
 
     render() {
-        let httpService = new HttpService('/api/cnbc/home/index.json');
-        httpService.callback.succeeded = (data) => {
-            CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN = data;
-
+        let bindMedel = () => {
             this.model.top = new MainTop(this.id.top);
             this.model.top.initialize();
             this.model.top.render();
@@ -240,11 +237,26 @@ class MainContainer extends Base {
             this.model.hotIssue.render();
 
             super.render();
-        };
+        }
 
-        httpService.callback.failed = (error) => {
-            alert(`정보를 불러오는데 실패하였습니다.(${error})`);
-        };
-        httpService.getData();
+        // 데이터 확인
+        if(!_.isEmpty(parent.CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN)) {
+            CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN = parent.CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN;
+            bindMedel();
+        }
+        else {
+            let httpService = new HttpService('/api/cnbc/home/index.json');
+            httpService.callback.succeeded = (data) => {
+                CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN = data;
+                bindMedel();
+            };
+
+            httpService.callback.failed = (error) => {
+                alert(`정보를 불러오는데 실패하였습니다.(${error})`);
+            };
+            httpService.getData();
+        }
+
+
     }
 }

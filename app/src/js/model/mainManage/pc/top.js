@@ -59,30 +59,28 @@ class MainTop extends Base {
             };
 
             this.target.html(`<div id="${this.id.self}">
-                    <div class="contop_left">
-                        <h2 class="hide">헤드라인 톱기사</h2>
-                        ${getSliderContainerTemplate()}
-                     </div>
-                     <div class="contop_right">
-                        <h2 class="hide">현재 방송중인 프로그램</h2>
-                        <!--2017-03-23 레이어팝업 추가 -->
-                        <div class="contop_bn" id="${this.id.ad}">
-                            <a href="#" class="cpo_w">
-                                  <span class="cpo_text_w">
-                                    <strong class="cpo_headtitle"><span class="icn"><i class="ir">SBSCNBC ON AIR</i></span><i class="ht_topbar"></i></strong>
-                                    <span class="cpo_onair_wrap">
-                                        <span class="cpo_onair"><i class="round_yellow_left icn"></i><span class="cpo_onair_text">ON-AIR</span><i class="round_yellow_right icn"></i></span>
-                                        <em class="cpo_prog_title" id="cpo_prog_title">용감한 토크쇼 직설 </em>
-                                        <span class="cpo_prog_day" id="prog_time">10:00~11:15</span>
-                                  </span>
-                                </span>
-                                <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/main/main_onair.jpg" alt="" class="cpo_prog_img" width="280" height="310"><!--alt값에 프로그램명 넣어주세요-->
-                            </a>
-                        </div>
-                    </div><!--contop_right-->
-                     </div>
+                <div class="contop_left">
+                    <h2 class="hide">헤드라인 톱기사</h2>
+                    ${getSliderContainerTemplate()}
                 </div>
-              `);
+                <div class="contop_right">
+                    <h2 class="hide">현재 방송중인 프로그램</h2>
+                    <!--2017-03-23 레이어팝업 추가 -->
+                    <div class="contop_bn" id="${this.id.ad}">
+                        <a href="#" class="cpo_w">
+                            <span class="cpo_text_w">
+                                <strong class="cpo_headtitle"><span class="icn"><i class="ir">SBSCNBC ON AIR</i></span><i class="ht_topbar"></i></strong>
+                                <span class="cpo_onair_wrap">
+                                    <span class="cpo_onair"><i class="round_yellow_left icn"></i><span class="cpo_onair_text">ON-AIR</span><i class="round_yellow_right icn"></i></span>
+                                    <em class="cpo_prog_title" id="cpo_prog_title">용감한 토크쇼 직설 </em>
+                                    <span class="cpo_prog_day" id="prog_time">10:00~11:15</span>
+                                </span>
+                            </span>
+                            <img src="http://img.sbs.co.kr/sw16/cnbc/pc/img/main/main_onair.jpg" alt="" class="cpo_prog_img" width="280" height="310"><!--alt값에 프로그램명 넣어주세요-->
+                        </a>
+                    </div>
+                </div><!--contop_right-->
+            </div>`);
 
             this.target.off();
             this.model.swiper = new Swiper( `#${this.id.swiper.container}`, {
