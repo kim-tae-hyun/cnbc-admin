@@ -59,8 +59,35 @@ class MainFixTop extends Base {
     }
 
     initialize() {
-        this.view.slider = CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN.slider;
+        this.view.drake = dragula([$('#left-defaults')[0], $('#right-defaults')[0]],{
+            removeOnSpill: true,
+            copySortSource: false,
+            copy: function (el, source) {
+                return source == $('#right-defaults')[0];
+            },
+            accepts: function (el, target) {
+                return target !== $('#right-defaults')[0];
+            }
+        })
 
+        this.view.drake.on('drop', function (el, target, source, sibling) {
+            let title = '';
+            if(!_.isUndefined(target.getElementsByClassName("gu-transit")[0])) {
+                title = target.getElementsByClassName("test")[0].innerText;
+                target.getElementsByClassName("gu-transit")[0].remove();
+            }
+
+            $('#left-defaults').append(`<tr>
+                                            <td class="col-sm-1"><img src="http://img.sbs.co.kr/sbscnbc/upload/2018/03/05/30000185142.jpg" alt="http://img.sbs.co.kr/sbscnbc/upload/2018/03/05/30000185142.jpg" width="50" height="40"></td>
+                                            <td class="col-sm-7" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small class="test">${title}</small></nobr></td>
+                                            <td class="col-sm-2"><span class="pie"><small>02-27 13:09</small></span></td>
+                                            <td class="col-sm-2"><small>김태현</small></td>
+                                            <td class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></td>
+                                        </tr>`)
+        });
+
+
+        this.view.slider = CNBC_ADMIN_GLOBAL.DATA.HTTP.MAIN.slider;
         super.initialize();
     }
 
