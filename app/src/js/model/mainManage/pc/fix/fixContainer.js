@@ -122,10 +122,6 @@ class MainFixContainer extends Base {
             });
         };
 
-
-        /**
-         *
-         */
     }
 
     initialize() {
