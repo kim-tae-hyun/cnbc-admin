@@ -62,12 +62,12 @@ class MainFixContainer extends Base {
                 return articleListTemplate;
             }
 
-            let getDrakeTemplate = (target) => {
+            let getDrakeTemplate = (articleId) => {
                 let drakeTemplate = '';
 
-                if(!_.isUndefined(target.getElementsByClassName("gu-transit")[0])) {
+                if(!_.isEmpty(articleId)) {
                     // swipe 에서 해당 아이디에 대한 정보를 불러온다.
-                    let articleInfo = _.findWhere(this.model.article, {articleId: String(target.getElementsByClassName("gu-transit")[0].id.replace(`${this.id.articleList.id}-`,"")) });
+                    let articleInfo = _.findWhere(this.model.article, {articleId: articleId});
 
                     if(!_.isUndefined(articleInfo)) {
                         drakeTemplate += `<div class="row" id="${this.id.articleList.id}-${articleInfo.articleId}">
@@ -78,9 +78,9 @@ class MainFixContainer extends Base {
                                     <div class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></div>
                                 </div>`;
                     }
-
-                    return drakeTemplate;
                 }
+
+                return drakeTemplate;
             };
 
             this.target.html(getArticleListTemplate());
@@ -98,11 +98,11 @@ class MainFixContainer extends Base {
             })
 
             this.view.drake.on('drop', (el, target, source, sibling) => {
+                let articleId = "";
                 // 오른쪽에서 drop
-                if(source.id == "right-defaults") {
+                if(source.id == this.id.drake.right) {
                     // 임시 데이터
                     // 뉴스 리스트 아이템을 swiper로 아이템 복사
-
                     this.model.article.push({
                         articleId: "10000894350",
                         title: "EU, 美 제품에 보복관세 부과…“규모는 약 4조 원”",
@@ -111,11 +111,14 @@ class MainFixContainer extends Base {
                         regDate : "02-28 12:09",
                         reporter : "김태현"
                     });
-
-                    LOG_UTIL.log(this.model.article);
+                    articleId = 10000894350;
                 }
 
-                target.getElementsByClassName("gu-transit")[0].outerHTML = getDrakeTemplate(target);
+                if(source.id == this.id.drake.left) {
+                    articleId = target.getElementsByClassName("gu-transit")[0].id.replace(`${this.id.articleList.id}-`,"");
+                }
+
+                target.getElementsByClassName("gu-transit")[0].outerHTML = getDrakeTemplate(String(articleId));
             });
         };
 
