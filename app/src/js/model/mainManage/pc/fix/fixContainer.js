@@ -38,7 +38,7 @@ class MainFixContainer extends Base {
                             <div class="row">
                                 <div class="pull-right" id="add">
                                     <div class="input-group">
-                                        <button class="btn btn-xs btn-primary" type="button" onclick="return false;"><i class="fa fa-upload"></i><span class="bold"> ADD NEWS</span></button>
+                                        <button class="btn btn-sm btn-primary" type="button" onclick="return false;"><i class="fa fa-upload"></i><span class="bold"> PUBLISH</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -92,30 +92,18 @@ class MainFixContainer extends Base {
             </div>
             `;
 
-            let getDrakeTemplate = (articleId) => {
-                let drakeTemplate = '';
-
-                if(!_.isEmpty(articleId)) {
-                    // swipe 에서 해당 아이디에 대한 정보를 불러온다.
-                    let articleInfo = _.findWhere(this.view.articleList, {articleId: articleId});
-
-                    if(!_.isUndefined(articleInfo)) {
-                        drakeTemplate += `<div class="row" id="${this.id.articleList.id}-${articleInfo.articleId}">
-                            <div class="col-sm-1"><img src="${articleInfo.imageUrl}" alt="${articleInfo.title}" width="50" height="40"></div>
-                            <div class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>${articleInfo.title}</small></nobr></div>
-                            <div class="col-sm-2"><span class="pie"><small>${articleInfo.regDate}</small></span></div>
-                            <div class="col-sm-2"><small>${articleInfo.reporter}</small></div>
-                            <div class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></div>
-                        </div>`;
-                    }
-                }
-
-                return drakeTemplate;
-            };
-
             this.target.self.html(bindTemplate);
             this.target.self.off();
 
+            this.bindArticleList();
+            this.bindNewsList();
+            this.bindDragura();
+        };
+
+        /**
+         * dragura 이벤트 정의
+         */
+        this.bindDragura = () => {
             this.model.drake = dragula([$(`#${this.id.drake.left}`)[0], $(`#${this.id.drake.right}`)[0]],{
                 removeOnSpill: true,
                 copySortSource: false,
@@ -129,49 +117,107 @@ class MainFixContainer extends Base {
 
             this.model.drake.on('drop', (el, target, source, sibling) => {
                 let articleId = "";
+                let articleInfo = {};
+                let drakeTemplate = "";
+
                 // 오른쪽에서 drop
                 if(source.id == this.id.drake.right) {
+                    // 중복 검사
                     articleId = target.getElementsByClassName("gu-transit")[0].id.replace(`${this.id.newsList.id}-`,"");
-                    let articleInfo = _.findWhere(this.view.newsList, {articleId: articleId});
-                    // 뉴스 리스트 아이템을 swiper로 아이템 복사
-                    this.view.articleList.push({
-                        articleId: articleInfo.articleId,
-                        title: articleInfo.title,
-                        summary: articleInfo.summary,
-                        imageUrl: articleInfo.imageUrl,
-                        regDate : articleInfo.regDate,
-                        reporter : articleInfo.reporter
-                    });
+                    if(!_.isUndefined(_.findWhere(this.view.articleList, {articleId: articleId}))) {
+                        alert("이미 등록된 기사 입니다.");
+                    }
+                    else {
+                        let newsInfo = _.findWhere(this.view.newsList, {articleId: articleId});
+                        articleInfo = {
+                            articleId: newsInfo.articleId,
+                            title: newsInfo.title,
+                            summary: newsInfo.summary,
+                            imageUrl: newsInfo.imageUrl,
+                            regDate : newsInfo.regDate,
+                            reporter : newsInfo.reporter
+                        }
+
+                        // 뉴스 리스트 아이템을 swiper로 아이템 복사
+                        this.view.articleList.push(articleInfo);
+                    }
                 }
 
+                // 왼쪽에서 drop
                 if(source.id == this.id.drake.left) {
                     articleId = target.getElementsByClassName("gu-transit")[0].id.replace(`${this.id.articleList.id}-`,"");
+                    articleInfo = _.findWhere(this.view.articleList, {articleId: articleId});
                 }
 
-                target.getElementsByClassName("gu-transit")[0].outerHTML = getDrakeTemplate(String(articleId));
+                drakeTemplate = this.getDrakeTemplate(articleInfo);
+                target.getElementsByClassName("gu-transit")[0].outerHTML = drakeTemplate;
             });
 
-            this.bindArticleList();
-            this.bindNewsList();
+
+            this.model.drake.on('remove', (el, container, source) => {
+                let articleId ='';
+                let articleInfo = {};
+                if(confirm('설정하신 기사를 삭제하시겠습니까?')) {
+                    articleId = el.id.replace(`${this.id.articleList.id}-`,"");
+                    articleInfo = _.findWhere(this.view.articleList, {articleId: articleId});
+
+                    if(!_.isEmpty(articleInfo)) {
+                        this.view.articleList.splice(_.indexOf(this.view.articleList, articleInfo), 1);
+                    }
+                }
+                this.bindArticleList();
+            })
+        }
+
+        /**
+         * left-drake 템플릿
+         * @param articleInfo
+         */
+        this.getDrakeTemplate = (articleInfo) => {
+            let drakeTemplate = '';
+
+            if(!_.isEmpty(articleInfo)) {
+                drakeTemplate += `
+                    <div class="social-feed-box" id="${this.id.articleList.id}-${articleInfo.articleId}">
+                        <div class="pull-right social-action">
+                            <button>
+                                <i class="fa fa-trash-o text-navy"></i>
+                            </button>
+                        </div>
+                        <div class="social-avatar">
+                            <a href="" class="pull-left">
+                                <img alt="${articleInfo.title}" src="${articleInfo.imageUrl}">
+                            </a>
+                            <div class="media-body">
+                                <input type="text" class="text-success form-control" value="${articleInfo.title}" style="height: 25px;">
+                            </div>
+                        </div>
+                        <div class="social-body">
+                            <div class="social-comment">
+                                <div class="media-body">
+                                    <textarea class="form-control" placeholder="Write comment...">${articleInfo.summary}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+
+            return drakeTemplate;
         };
 
+        /**
+         * 기사 리스트 바인드
+         */
         this.bindArticleList = () => {
             let getArticleListTemplate = () => {
 
                 let articleListTemplate = ``;
                 this.view.articleList.forEach((article, articleIndex, articles) => {
-                    articleListTemplate += `<div class="row" id="${this.id.articleList.id}-${article.articleId}">
-                        <div class="col-sm-1"><img src="${article.imageUrl}" alt="${article.title}" width="50" height="40"></div>
-                        <div class="col-sm-6" style="text-overflow: ellipsis; overflow: hidden;"><nobr><small>${article.title}</small></nobr></div>
-                        <div class="col-sm-2"><span class="pie"><small>${article.regDate}</small></span></div>
-                        <div class="col-sm-2"><small>${article.reporter}</small></div>
-                        <div class="col-sm-1"><a href="#"><i class="fa fa-trash-o text-navy"></i></a></div>
-                    </div>`;
+                    articleListTemplate +=  this.getDrakeTemplate(article);
                 });
 
                 return articleListTemplate;
             }
-
 
             this.target.self.find(`#${this.id.drake.left}`).html(getArticleListTemplate());
 
@@ -179,6 +225,9 @@ class MainFixContainer extends Base {
             this.target.articleList.off();
         }
 
+        /**
+         * 뉴스 리스트 바인드
+         */
         this.bindNewsList = () => {
             let getNewsListTemplate = () => {
                 let newsListTemplate = ``;
@@ -200,7 +249,6 @@ class MainFixContainer extends Base {
             this.target.articleList = this.target.self.find(`#${this.id.drake.left}`);
             this.target.articleList.off();
         }
-
     }
 
     initialize() {
