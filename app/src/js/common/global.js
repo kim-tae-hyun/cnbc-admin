@@ -25,7 +25,8 @@ const CNBC_ADMIN_GLOBAL = {
     DATA: {
         HTTP: {
             COMMON: {},
-            MAIN: {}
+            MAIN: {},
+            NEWSLIST : {}
         }
     }
 }
