@@ -43,7 +43,7 @@ class MainFixContainer extends Base {
                                 </div>
                             </div>
                         </div>
-                        <div class="ibox-content" id="${this.id.drake.left}" style="height: 500px">
+                        <div class="ibox-content" id="${this.id.drake.left}" style="height: 500px;overflow-y: scroll;">
                         </div>
                     </div>
                 </div>

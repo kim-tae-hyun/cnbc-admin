@@ -52,7 +52,7 @@ class MainManageContainer extends Base {
 
             // top fix click event
             this.target.on('click', `#${this.id.fix.top.button}`, (event) => {
-                let remoteUrl = `/view/mainManage/pc/fix/top.html?_=${new Date().getTime()}`;
+                let remoteUrl = `/view/mainManage/pc/fix/fix.html?_=${new Date().getTime()}`;
                 $(`#${this.id.fix.top.modal}`).removeData('bs.modal');
                 $(`#${this.id.fix.top.modal}`).modal({
                     remote : remoteUrl,
