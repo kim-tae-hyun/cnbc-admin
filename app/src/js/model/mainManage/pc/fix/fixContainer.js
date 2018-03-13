@@ -13,7 +13,6 @@ class MainFixContainer extends Base {
             newsList : {}
         }
 
-
         this.id = {
             self: 'app-cnbc-admin-mainManage-fix-container-self',
             drake : {
@@ -43,7 +42,8 @@ class MainFixContainer extends Base {
                                 </div>
                             </div>
                         </div>
-                        <div class="ibox-content" id="${this.id.drake.left}" style="height: 500px;overflow-y: scroll;">
+                        <div class="ibox-content" id="aaaa" style="height: 500px;overflow-y: scroll;">
+                            <div class="row" id="${this.id.drake.left}"></div>
                         </div>
                     </div>
                 </div>
@@ -133,6 +133,7 @@ class MainFixContainer extends Base {
                             articleId: newsInfo.articleId,
                             title: newsInfo.title,
                             summary: newsInfo.summary,
+                            linkUrl : `${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}/read.jsp?pmArticleId=${newsInfo.articleId}`,
                             imageUrl: newsInfo.imageUrl,
                             regDate : newsInfo.regDate,
                             reporter : newsInfo.reporter
@@ -166,7 +167,23 @@ class MainFixContainer extends Base {
                     }
                 }
                 this.bindArticleList();
-            })
+            });
+
+            this.model.drake.on('drag', (el,source) => {
+                let h = $(window).height();
+                $(document).mousemove((e) => {
+                    let mousePosition = e.pageY - $(window).scrollTop();
+                    let topRegion = $('#aaaa').offset().top;
+                    let bottomRegion = h - $('#aaaa').offset().top + 10;
+                    if(e.which == 1 && (mousePosition < topRegion || mousePosition > bottomRegion)){    // e.wich = 1 => click down !
+                        let distance = e.clientY - h / 2;
+                        distance = distance * 0.1; // <- velocity
+                        $('#aaaa').scrollTop( distance + $('#aaaa').scrollTop()) ;
+                    }else{
+                        $('#aaaa').unbind('mousemove');
+                    }
+                });
+            });
         }
 
         /**
@@ -178,24 +195,25 @@ class MainFixContainer extends Base {
 
             if(!_.isEmpty(articleInfo)) {
                 drakeTemplate += `
-                    <div class="social-feed-box" id="${this.id.articleList.id}-${articleInfo.articleId}">
+                    <div class="social-feed-box" id="${this.id.articleList.id}-${articleInfo.articleId}" style="border: 1px solid #1ab394;">
                         <div class="pull-right social-action">
-                            <button>
-                                <i class="fa fa-trash-o text-navy"></i>
-                            </button>
+                            <a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}/read.jsp?pmArticleId=${articleInfo.articleId}" target="_blank">
+                                <i class="fa fa-external-link text-navy"></i>
+                            </a>
                         </div>
                         <div class="social-avatar">
                             <a href="" class="pull-left">
-                                <img alt="${articleInfo.title}" src="${articleInfo.imageUrl}">
+                                <img alt="${articleInfo.title}" src="${articleInfo.imageUrl}" style="width: 50px;height: 50px">
                             </a>
                             <div class="media-body">
-                                <input type="text" class="text-success form-control" value="${articleInfo.title}" style="height: 25px;">
+                                <input type="text" class="text-success form-control" value="${articleInfo.title}" style="height: 25px;font-size: 12px" placeholder="Write title...">
+                                <input type="text" class="form-control" value="${articleInfo.linkUrl}" style="height: 25px;font-size: 12px" placeholder="Write link...">
                             </div>
                         </div>
                         <div class="social-body">
                             <div class="social-comment">
                                 <div class="media-body">
-                                    <textarea class="form-control" placeholder="Write comment...">${articleInfo.summary}</textarea>
+                                    <textarea class="form-control" placeholder="Write summary...">${articleInfo.summary}</textarea>
                                 </div>
                             </div>
                         </div>

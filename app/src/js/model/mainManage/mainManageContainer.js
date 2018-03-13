@@ -12,16 +12,16 @@ class MainManageContainer extends Base {
         this.id = {
             self: 'cnbc-admin-main-container-self',
             fix : {
-                top : {
-                    button : 'cnbc-admin-main-container-fix-top-button',
-                    modal : 'cnbc-admin-main-container-fix-top-modal'
-                },
+                top : 'cnbc-admin-main-container-fix-top',
                 popular : 'cnbc-admin-main-container-fix-popular',
                 ceo : 'cnbc-admin-main-container-fix-ceo',
                 program : 'cnbc-admin-main-container-fix-program',
                 premium : 'cnbc-admin-main-container-fix-premium',
                 financial : 'cnbc-admin-main-container-fix-financial',
                 hotIssue : 'cnbc-admin-main-container-fix-hotIssue'
+            },
+            modal : {
+                fix : 'cnbc-admin-main-container-modal-fix'
             }
         };
 
@@ -31,8 +31,8 @@ class MainManageContainer extends Base {
             let getBaseTemplate = ()=> {
                 let baseTemplate = `
                 <!-- remote ajax call-->
-                <button id="${this.id.fix.top.button}" style="display: none;"></button>
-                <div class="modal modal-center fade" id="${this.id.fix.top.modal}" tabindex='-1'>
+                <button id="${this.id.fix.top}" style="display: none;"></button>
+                <div class="modal modal-center fade" id="${this.id.modal.fix}" tabindex='-1'>
                     <div class="modal-dialog modal-center modal-fullsize">
                         <div class="modal-content ">
                             <!-- remote ajax call이 되는영역 -->
@@ -51,10 +51,10 @@ class MainManageContainer extends Base {
             this.target.off();
 
             // top fix click event
-            this.target.on('click', `#${this.id.fix.top.button}`, (event) => {
+            this.target.on('click', `#${this.id.fix.top}`, (event) => {
                 let remoteUrl = `/view/mainManage/pc/fix/fix.html?_=${new Date().getTime()}`;
-                $(`#${this.id.fix.top.modal}`).removeData('bs.modal');
-                $(`#${this.id.fix.top.modal}`).modal({
+                $(`#${this.id.modal.fix}`).removeData('bs.modal');
+                $(`#${this.id.modal.fix}`).modal({
                     remote : remoteUrl,
                     backdrop: false
                 });
