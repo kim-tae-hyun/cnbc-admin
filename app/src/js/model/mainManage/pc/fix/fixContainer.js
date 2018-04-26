@@ -33,7 +33,7 @@ class MainFixContainer extends Base {
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>편집 메뉴 정보 이름</h5>
+                            <h5>{편집 메뉴 정보 이름}</h5>
                             <div class="row">
                                 <div class="pull-right" id="add">
                                     <div class="input-group">
