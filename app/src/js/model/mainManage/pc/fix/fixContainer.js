@@ -170,7 +170,7 @@ class MainFixContainer extends Base {
             });
 
             /**
-             * dragula drag 이벤트 핸들러1
+             * dragula drag 이벤트 핸들러2
              */
             this.model.drake.on('drag', (el,source) => {
                 let h = $(window).height();
