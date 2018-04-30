@@ -170,12 +170,13 @@ class MainFixContainer extends Base {
             });
 
             /**
-             * dragula drag 이벤트
+             * drag 이벤트
              */
             this.model.drake.on('drag', (el,source) => {
                 let h = $(window).height();
                 $(document).mousemove((e) => {
                     if(!_.isUndefined($('#aaaa').offset())) {
+
                         let mousePosition = e.pageY - $(window).scrollTop();
                         let topRegion = $('#aaaa').offset().top;
                         let bottomRegion = h - $('#aaaa').offset().top + 10;
