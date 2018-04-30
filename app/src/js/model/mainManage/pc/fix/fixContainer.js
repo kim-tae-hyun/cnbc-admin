@@ -169,18 +169,24 @@ class MainFixContainer extends Base {
                 this.bindArticleList();
             });
 
+            /**
+             * dragula drag 이벤트 핸들러
+             */
             this.model.drake.on('drag', (el,source) => {
                 let h = $(window).height();
                 $(document).mousemove((e) => {
-                    let mousePosition = e.pageY - $(window).scrollTop();
-                    let topRegion = $('#aaaa').offset().top;
-                    let bottomRegion = h - $('#aaaa').offset().top + 10;
-                    if(e.which == 1 && (mousePosition < topRegion || mousePosition > bottomRegion)){    // e.wich = 1 => click down !
-                        let distance = e.clientY - h / 2;
-                        distance = distance * 0.1; // <- velocity
-                        $('#aaaa').scrollTop( distance + $('#aaaa').scrollTop()) ;
-                    }else{
-                        $('#aaaa').unbind('mousemove');
+                    if(!_.isUndefined($('#aaaa').offset())) {
+                        let mousePosition = e.pageY - $(window).scrollTop();
+                        let topRegion = $('#aaaa').offset().top;
+                        let bottomRegion = h - $('#aaaa').offset().top + 10;
+                        
+                        if(e.which == 1 && (mousePosition < topRegion || mousePosition > bottomRegion)){    // e.wich = 1 => click down !
+                            let distance = e.clientY - h / 2;
+                            distance = distance * 0.1; // <- velocity
+                            $('#aaaa').scrollTop( distance + $('#aaaa').scrollTop()) ;
+                        }else{
+                            $('#aaaa').unbind('mousemove');
+                        }
                     }
                 });
             });
@@ -197,9 +203,7 @@ class MainFixContainer extends Base {
                 drakeTemplate += `
                     <div class="social-feed-box" id="${this.id.articleList.id}-${articleInfo.articleId}" style="border: 1px solid #1ab394;">
                         <div class="pull-right social-action">
-                            <a href="${CNBC_ADMIN_GLOBAL.CONFIG.URL.CNBC}/read.jsp?pmArticleId=${articleInfo.articleId}" target="_blank">
-                                <i class="fa fa-external-link text-navy"></i>
-                            </a>
+                            <span class="label label-primary">3</span>
                         </div>
                         <div class="social-avatar" style="padding: 5px 15px 0 5px;">
                             <a href="" class="pull-left">
@@ -213,7 +217,7 @@ class MainFixContainer extends Base {
                         <div class="social-body" style="padding: 5px;">
                             <div class="social-comment">
                                 <div class="media-body">
-                                    <textarea class="form-control" placeholder="Write summary..." style="font-size: 11px">${articleInfo.summary}</textarea>
+                                    <textarea class="form-control" placeholder="Write summary..." style="font-size: 11px;height:30px">${articleInfo.summary}</textarea>
                                 </div>
                             </div>
                         </div>
