@@ -176,6 +176,7 @@ class MainFixContainer extends Base {
                 let h = $(window).height();
                 $(document).mousemove((e) => {
                     if(!_.isUndefined($('#aaaa').offset())) {
+
                         let mousePosition = e.pageY - $(window).scrollTop();
                         let topRegion = $('#aaaa').offset().top;
                         let bottomRegion = h - $('#aaaa').offset().top + 10;
