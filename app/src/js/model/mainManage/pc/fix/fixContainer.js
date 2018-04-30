@@ -178,6 +178,7 @@ class MainFixContainer extends Base {
                     if(e.which == 1 && (mousePosition < topRegion || mousePosition > bottomRegion)){    // e.wich = 1 => click down !
                         let distance = e.clientY - h / 2;
                         distance = distance * 0.1; // <- velocity
+
                         $('#aaaa').scrollTop( distance + $('#aaaa').scrollTop()) ;
                     }else{
                         $('#aaaa').unbind('mousemove');
