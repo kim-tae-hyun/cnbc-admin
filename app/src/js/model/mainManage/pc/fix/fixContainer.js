@@ -43,7 +43,7 @@ class MainFixContainer extends Base {
                             </div>
                         </div>
                         <div class="ibox-content" id="aaaa" style="height: 500px;overflow-y: scroll;">
-                            <div class="row" id="${this.id.drake.left}"></div>
+                            <div class="row" id="${this.id.drake.left}" style="padding-bottom: 50px;"></div>
                         </div>
                     </div>
                 </div>
@@ -201,19 +201,19 @@ class MainFixContainer extends Base {
                                 <i class="fa fa-external-link text-navy"></i>
                             </a>
                         </div>
-                        <div class="social-avatar">
+                        <div class="social-avatar" style="padding: 5px 15px 0 5px;">
                             <a href="" class="pull-left">
-                                <img alt="${articleInfo.title}" src="${articleInfo.imageUrl}" style="width: 50px;height: 50px">
+                                <img alt="${articleInfo.title}" src="${articleInfo.imageUrl}" style="width: 40px;height: 40px">
                             </a>
                             <div class="media-body">
-                                <input type="text" class="text-success form-control" value="${articleInfo.title}" style="height: 25px;font-size: 12px" placeholder="Write title...">
-                                <input type="text" class="form-control" value="${articleInfo.linkUrl}" style="height: 25px;font-size: 12px" placeholder="Write link...">
+                                <input type="text" class="text-success form-control" value="${articleInfo.title}" style="height: 20px;font-size: 11px" placeholder="Write title...">
+                                <input type="text" class="form-control" value="${articleInfo.linkUrl}" style="height: 20px;font-size: 11px" placeholder="Write link...">
                             </div>
                         </div>
-                        <div class="social-body">
+                        <div class="social-body" style="padding: 5px;">
                             <div class="social-comment">
                                 <div class="media-body">
-                                    <textarea class="form-control" placeholder="Write summary...">${articleInfo.summary}</textarea>
+                                    <textarea class="form-control" placeholder="Write summary..." style="font-size: 11px">${articleInfo.summary}</textarea>
                                 </div>
                             </div>
                         </div>
