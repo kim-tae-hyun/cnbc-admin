@@ -169,6 +169,9 @@ class MainFixContainer extends Base {
                 this.bindArticleList();
             });
 
+            /**
+             * drag 이벤트
+             */
             this.model.drake.on('drag', (el,source) => {
                 let h = $(window).height();
                 $(document).mousemove((e) => {
