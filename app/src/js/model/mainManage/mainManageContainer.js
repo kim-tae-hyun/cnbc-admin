@@ -59,6 +59,12 @@ class MainManageContainer extends Base {
                     backdrop: false
                 });
             });
+
+            // modal 이벤트 핸들러 정의
+            $(`#${this.id.modal.fix}`).on('show.bs.modal', (event) => {
+                alert("show");
+            });
+
             // popular fix click event
             this.target.on('click', `#${this.id.fix.popular}`, (event) => {
                 alert('popular');
